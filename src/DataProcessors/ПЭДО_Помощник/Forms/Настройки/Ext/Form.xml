@@ -26,6 +26,28 @@
 				</Title>
 				<ExtendedTooltip name="ПроверитьГотовностьРасширеннаяПодсказка" id="4"/>
 			</Button>
+			<Button name="ВыбратьСертификат" id="70">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ВыбратьСертификат</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Выбрать сертификат</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ВыбратьСертификатРасширеннаяПодсказка" id="71"/>
+			</Button>
+			<Button name="ПроверитьСертификат" id="72">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПроверитьСертификат</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Проверить сертификат</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ПроверитьСертификатРасширеннаяПодсказка" id="73"/>
+			</Button>
 			<Button name="ЗавестиСвойства" id="5">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.Command.ЗавестиСвойства</CommandName>
@@ -190,6 +212,28 @@
 					<HorizontalStretch>true</HorizontalStretch>
 					<ContextMenu name="ОтпечатокПодписантаКонтекстноеМеню" id="31"/>
 					<ExtendedTooltip name="ОтпечатокПодписантаРасширеннаяПодсказка" id="32"/>
+				</InputField>
+				<InputField name="СведенияОСертификате" id="74">
+					<DataPath>СведенияОСертификате</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сертификат</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кто владелец и до какой даты действует. Отзыв проверяется кнопкой — он требует обращения к УЦ.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ReadOnly>true</ReadOnly>
+					<MultiLine>true</MultiLine>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Height>3</Height>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="СведенияОСертификатеКонтекстноеМеню" id="75"/>
+					<ExtendedTooltip name="СведенияОСертификатеРасширеннаяПодсказка" id="76"/>
 				</InputField>
 				<InputField name="Хост" id="33">
 					<DataPath>Хост</DataPath>
@@ -424,6 +468,21 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="СведенияОСертификате" id="68">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сведения о сертификате</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 		<Attribute name="ГотовыеСтатусыЗаказа" id="59">
 			<Title>
 				<v8:item>
@@ -509,6 +568,24 @@
 				</v8:item>
 			</Title>
 			<Action>ПеренестиВОбщие</Action>
+		</Command>
+		<Command name="ВыбратьСертификат" id="66">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать сертификат</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ВыбратьСертификат</Action>
+		</Command>
+		<Command name="ПроверитьСертификат" id="67">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить сертификат</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПроверитьСертификат</Action>
 		</Command>
 	</Commands>
 </Form>

@@ -27,6 +27,11 @@
 				<CommandName>Form.Command.ДвойныеОтправки</CommandName>
 				<ExtendedTooltip name="КнопкаДвойныеРасширеннаяПодсказка" id="6"/>
 			</Button>
+			<Button name="КнопкаНастройки" id="200">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОткрытьНастройки</CommandName>
+				<ExtendedTooltip name="КнопкаНастройкиРасширеннаяПодсказка" id="201"/>
+			</Button>
 			<Button name="КнопкаОткрыть" id="7">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.Command.ОткрытьДокумент</CommandName>
@@ -610,6 +615,21 @@
 				</v8:item>
 			</Title>
 			<Action>ОткрытьДокументКоманда</Action>
+		</Command>
+		<Command name="ОткрытьНастройки" id="202">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки ЭДО: отпечаток подписанта, окно отбора, хост оператора</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьНастройкиКоманда</Action>
 		</Command>
 	</Commands>
 </Form>
