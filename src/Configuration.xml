@@ -43,14 +43,14 @@
 			<Comment/>
 			<ConfigurationExtensionPurpose>AddOn</ConfigurationExtensionPurpose>
 			<KeepMappingToExtendedConfigurationObjectsByIDs>true</KeepMappingToExtendedConfigurationObjectsByIDs>
-			<NamePrefix>ПЭДО_Проф</NamePrefix>
+			<NamePrefix>ПрофТест_</NamePrefix>
 			<ConfigurationExtensionCompatibilityMode>Version8_3_14</ConfigurationExtensionCompatibilityMode>
 			<UsePurposes>
 				<v8:Value xsi:type="app:ApplicationUsePurpose">PlatformApplication</v8:Value>
 			</UsePurposes>
 			<ScriptVariant>Russian</ScriptVariant>
 			<Vendor/>
-			<Version>1.0.0.4</Version>
+			<Version>1.0.0.5</Version>
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
 			<BriefInformation>
 				<v8:item>
@@ -65,7 +65,7 @@
 		</Properties>
 		<ChildObjects>
 			<Language>Русский</Language>
-			<CommonModule>ПЭДО_ПрофильБазы</CommonModule>
+			<CommonModule>ПрофТест_Модуль</CommonModule>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>
