@@ -50,7 +50,7 @@
 			</UsePurposes>
 			<ScriptVariant>Russian</ScriptVariant>
 			<Vendor>ontab</Vendor>
-			<Version>1.2.10.60</Version>
+			<Version>1.2.10.61</Version>
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
 			<BriefInformation>
 				<v8:item>
@@ -71,8 +71,6 @@
 			<CommonModule>ПЭДО_АктСверкиДанные</CommonModule>
 		<CommonModule>ЭлектронныеДокументыКлиент</CommonModule>
 			<CommonCommand>ПЭДО_ОтправитьПоЭДО</CommonCommand>
-			<Catalog>Контрагенты</Catalog>
-			<Catalog>Организации</Catalog>
 			<DataProcessor>ПЭДО_Помощник</DataProcessor>
 			<DataProcessor>ПЭДО_ПлатформаЭДО</DataProcessor>
 		</ChildObjects>
