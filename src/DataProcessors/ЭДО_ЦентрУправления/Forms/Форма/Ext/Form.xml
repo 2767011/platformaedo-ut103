@@ -697,6 +697,19 @@
 									<ContextMenu name="ДокСостояниеКонтекстноеМеню" id="184"/>
 									<ExtendedTooltip name="ДокСостояниеРасширеннаяПодсказка" id="185"/>
 								</InputField>
+								<InputField name="ДокПричина" id="269">
+									<DataPath>Документы.Причина</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Причина</v8:content>
+										</v8:item>
+									</Title>
+									<ReadOnly>true</ReadOnly>
+									<Width>40</Width>
+									<ContextMenu name="ДокПричинаКонтекстноеМеню" id="270"/>
+									<ExtendedTooltip name="ДокПричинаРасширеннаяПодсказка" id="271"/>
+								</InputField>
 							</ChildItems>
 						</Table>
 						<Table name="ТаблицаСписокКА" id="186">
@@ -1156,6 +1169,15 @@
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
 							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Причина" id="268">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>500</v8:Length>
 							<v8:AllowedLength>Variable</v8:AllowedLength>
 						</v8:StringQualifiers>
 					</Type>
