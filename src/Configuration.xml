@@ -50,7 +50,7 @@
 			</UsePurposes>
 			<ScriptVariant>Russian</ScriptVariant>
 			<Vendor>ontab</Vendor>
-			<Version>1.4.21.0</Version>
+			<Version>1.4.22.0</Version>
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
 			<BriefInformation>
 				<v8:item>
@@ -75,6 +75,7 @@
 		<CommonModule>ЭлектронныеДокументыКлиент</CommonModule>
 		<CommonModule>ОбменСГИСЭПДКлиентПереопределяемый</CommonModule>
 		<CommonModule>ЭлектронныеДокументыПереопределяемый</CommonModule>
+		<CommonModule>ЭлектронныеДокументыСлужебныйВызовСервера</CommonModule>
 		<CommonModule>МодульРегламентныхЗаданий</CommonModule>
 			<CommonCommand>ЭДО_ОтправитьПоЭДО</CommonCommand>
 			<Catalog>Контрагенты</Catalog>
