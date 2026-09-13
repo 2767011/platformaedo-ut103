@@ -581,7 +581,15 @@
 							<CommandBarLocation>Top</CommandBarLocation>
 							<Height>18</Height>
 							<ContextMenu name="ТаблицаДокументовКонтекстноеМеню" id="156"/>
-							<AutoCommandBar name="ТаблицаДокументовКоманднаяПанель" id="157"/>
+							<AutoCommandBar name="ТаблицаДокументовКоманднаяПанель" id="157">
+								<ChildItems>
+									<Button name="КнопкаОтправитьВыделенные" id="265">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОтправитьВыделенные</CommandName>
+										<ExtendedTooltip name="КнопкаОтправитьВыделенныеРасширеннаяПодсказка" id="266"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
 							<ExtendedTooltip name="ТаблицаДокументовРасширеннаяПодсказка" id="158"/>
 							<SearchStringAddition name="ТаблицаДокументовСтрокаПоиска" id="159">
 								<AdditionSource>
@@ -1266,6 +1274,21 @@
 				</v8:item>
 			</Title>
 			<Action>СнятьПаузуВыполнить</Action>
+		</Command>
+		<Command name="ОтправитьВыделенные" id="267">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить выделенные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить или переотправить в ЭДО выделенные документы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтправитьВыделенныеВыполнить</Action>
 		</Command>
 	</Commands>
 </Form>
