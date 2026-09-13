@@ -96,6 +96,44 @@
 					<ContextMenu name="ТекущийСтатусКонтекстноеМеню" id="19"/>
 					<ExtendedTooltip name="ТекущийСтатусРасширеннаяПодсказка" id="20"/>
 				</InputField>
+				<UsualGroup name="ГруппаЗапросАннулирования" id="144">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Запрос контрагента на аннулирование</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЗапросАннулированияРасширеннаяПодсказка" id="145"/>
+					<ChildItems>
+						<InputField name="ЗапросАннулирования" id="146">
+							<DataPath>ЗапросАннулирования</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Контрагент просит аннулировать</v8:content>
+								</v8:item>
+							</Title>
+							<Width>48</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="ЗапросАннулированияКонтекстноеМеню" id="147"/>
+							<ExtendedTooltip name="ЗапросАннулированияРасширеннаяПодсказка" id="148"/>
+						</InputField>
+						<Button name="КнПринятьАннулирование" id="149">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ПринятьАннулирование</CommandName>
+							<ExtendedTooltip name="КнПринятьАннулированиеРасширеннаяПодсказка" id="150"/>
+						</Button>
+						<Button name="КнОтклонитьАннулирование" id="151">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ОтклонитьАннулирование</CommandName>
+							<ExtendedTooltip name="КнОтклонитьАннулированиеРасширеннаяПодсказка" id="152"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
 				<UsualGroup name="ГруппаИдентификатора" id="24">
 					<Group>AlwaysHorizontal</Group>
 					<Representation>None</Representation>
@@ -197,6 +235,17 @@
 									</v8:item>
 								</Title>
 								<ExtendedTooltip name="КнОтправитьРасширеннаяПодсказка" id="2"/>
+							</Button>
+							<Button name="КнАннулировать" id="142">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.АннулироватьОтправку</CommandName>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Аннулировать</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="КнАннулироватьРасширеннаяПодсказка" id="143"/>
 							</Button>
 						</ChildItems>
 					</AutoCommandBar>
@@ -721,6 +770,21 @@
 				</Column>
 			</Columns>
 		</Attribute>
+		<Attribute name="ЗапросАннулирования" id="138">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запрос на аннулирование</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ОтправитьДокумент" id="125">
@@ -803,6 +867,51 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОткрытьНаСайте</Action>
+		</Command>
+		<Command name="АннулироватьОтправку" id="139">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аннулировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить контрагенту предложение об аннулировании выбранного экземпляра</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>АннулироватьОтправку</Action>
+		</Command>
+		<Command name="ПринятьАннулирование" id="140">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Принять</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подписать предложение контрагента об аннулировании</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПринятьАннулирование</Action>
+		</Command>
+		<Command name="ОтклонитьАннулирование" id="141">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отклонить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отказать контрагенту в аннулировании с указанием причины</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтклонитьАннулирование</Action>
 		</Command>
 	</Commands>
 	<Parameters>
