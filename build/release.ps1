@@ -1,4 +1,4 @@
-﻿# Сборка и публикация релиза расширения «ПлатформаЭДО» на GitHub.
+﻿# Сборка и публикация релиза расширения «ЦентрУправленияЭДО» на GitHub.
 #
 # Номер релиза берётся из <Version> в src/Configuration.xml — второго места для номера нет
 # намеренно: расходящиеся сборки с одинаковым номером отличить в базе нечем.
@@ -226,7 +226,7 @@ try {
     }
 
     Write-Step "тег $tag"
-    Invoke-GitOrThrow 'tag' @('tag', '-a', $tag, '-m', "ПлатформаЭДО $version") | Out-Null
+    Invoke-GitOrThrow 'tag' @('tag', '-a', $tag, '-m', "ЦентрУправленияЭДО $version") | Out-Null
     try {
         Invoke-GitOrThrow 'push тега' @('push', 'origin', $tag) | Out-Null
     } catch {
@@ -243,7 +243,7 @@ try {
 
     Write-Step "релиз на GitHub ($slug)"
     $ghArgs = @('release', 'create', $tag, $cfePath, $shaPath,
-        '--repo', $slug, '--title', "ПлатформаЭДО $version", '--notes-file', $notesPath)
+        '--repo', $slug, '--title', "ЦентрУправленияЭДО $version", '--notes-file', $notesPath)
     if ($Draft) { $ghArgs += '--draft' }
     # gh печатает ход загрузки в stderr — судим по коду возврата, как и с git.
     $prevPreference = $ErrorActionPreference

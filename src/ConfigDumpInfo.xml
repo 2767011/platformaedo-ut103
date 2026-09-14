@@ -15,7 +15,7 @@
 		<Metadata name="CommonModule.ЭДО_Клиент.Module" id="4016eaea-7f04-54c5-b9d1-5f19f4e499c9.0" configVersion="0c00dfcba86c03f19b588eeb343be68d0048c49f"/>
 		<Metadata name="CommonModule.ЭДО_Сервер" id="704f70eb-b808-57ad-ae1d-e2d3005905ae" configVersion="4d760ccc001ed1dc93c12a8dfc5dca284bb9f8d0"/>
 		<Metadata name="CommonModule.ЭДО_Сервер.Module" id="704f70eb-b808-57ad-ae1d-e2d3005905ae.0" configVersion="af172326f31acedbdb7578c1d7ca1042f5d6298e"/>
-		<Metadata name="Configuration.ПлатформаЭДО" id="a883472e-b8ee-5bac-b62d-a5941e5db2d5" configVersion="4bffe5a189fe1132841337307c54e7de402b13c7"/>
+		<Metadata name="Configuration.ЦентрУправленияЭДО" id="a883472e-b8ee-5bac-b62d-a5941e5db2d5" configVersion="4bffe5a189fe1132841337307c54e7de402b13c7"/>
 		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО" id="195e6753-bab3-5aa0-841a-e608ad552fba" configVersion="ef9311cacc89bc7ce3315bb2243333edb81877aa">
 			<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Attribute.ЭтоТестоваяОбработка" id="ce2cf926-4eb7-43c0-907e-eff2c8d127f7"/>
 		</Metadata>
