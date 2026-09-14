@@ -27,7 +27,6 @@
 			<ObjectBelonging>Adopted</ObjectBelonging>
 			<Name>Организации</Name>
 			<Comment/>
-			<ExtendedConfigurationObject>b3f7df39-dc92-457a-8604-eb57b6a7a403</ExtendedConfigurationObject>
 		</Properties>
 		<ChildObjects>
 			<Attribute uuid="7ee0bc85-4387-5097-af26-b3d6b95d527d">
@@ -36,7 +35,6 @@
 					<ObjectBelonging>Adopted</ObjectBelonging>
 					<Name>ИНН</Name>
 					<Comment/>
-					<ExtendedConfigurationObject>1d73c533-1e30-4960-86d6-ce2c9d1072c0</ExtendedConfigurationObject>
 					<Type>
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
@@ -52,7 +50,6 @@
 					<ObjectBelonging>Adopted</ObjectBelonging>
 					<Name>КПП</Name>
 					<Comment/>
-					<ExtendedConfigurationObject>3344c40b-5eb9-4b4c-aeb1-b6ca47734008</ExtendedConfigurationObject>
 					<Type>
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
