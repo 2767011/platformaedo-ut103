@@ -80,6 +80,7 @@
 			<CommonCommand>ЭДО_ОтправитьПоЭДО</CommonCommand>
 			<Catalog>Контрагенты</Catalog>
 			<Catalog>Организации</Catalog>
+			<InformationRegister>лионСтатусыДокументовЭДО</InformationRegister>
 			<DataProcessor>ЭДО_Помощник</DataProcessor>
 			<DataProcessor>ЭДО_ПлатформаЭДО</DataProcessor>
 			<DataProcessor>ЭДО_КарточкаДокумента</DataProcessor>
