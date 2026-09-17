@@ -194,10 +194,6 @@
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаКнопкиСертификатаРасширеннаяПодсказка" id="35"/>
 					<ChildItems>
-						<Button name="ВыбратьСертификат" id="36">
-							<CommandName>Form.Command.ВыбратьСертификат</CommandName>
-							<ExtendedTooltip name="ВыбратьСертификатРасширеннаяПодсказка" id="37"/>
-						</Button>
 						<Button name="ПроверитьСертификат" id="38">
 							<CommandName>Form.Command.ПроверитьСертификат</CommandName>
 							<ExtendedTooltip name="ПроверитьСертификатРасширеннаяПодсказка" id="39"/>
