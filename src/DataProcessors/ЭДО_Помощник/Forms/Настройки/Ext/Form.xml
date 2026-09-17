@@ -204,7 +204,7 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Base64. Меняется при КАЖДОМ перевыпуске КЭП: прежний сертификат отзывается.</v8:content>
+							<v8:content>Base64. Меняется при КАЖДОМ перевыпуске КЭП: прежний сертификат отзывается. Общая настройка, действует пока не заданы учётные записи организаций.</v8:content>
 						</v8:item>
 					</ToolTip>
 					<AutoMarkIncomplete>true</AutoMarkIncomplete>
@@ -271,6 +271,168 @@
 					<ContextMenu name="ПрочиеНашиАдресаЭДОКонтекстноеМеню" id="37"/>
 					<ExtendedTooltip name="ПрочиеНашиАдресаЭДОРасширеннаяПодсказка" id="38"/>
 				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаУчетныеЗаписи" id="77">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учётные записи организаций</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>WeakSeparation</Representation>
+			<ShowTitle>true</ShowTitle>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>У каждой организации свой сертификат и идентификатор у оператора. Пока список пуст, действует общий отпечаток выше — для организаций с разрешённой отправкой. Подписант-физлицо подписывает по МЧД: номер и дата обязательны.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаУчетныеЗаписиРасширеннаяПодсказка" id="78"/>
+			<ChildItems>
+				<Table name="УчетныеЗаписи" id="79">
+					<DataPath>УчетныеЗаписи</DataPath>
+					<ChangeRowSet>true</ChangeRowSet>
+					<ChangeRowOrder>true</ChangeRowOrder>
+					<HeightInTableRows>5</HeightInTableRows>
+					<ContextMenu name="УчетныеЗаписиКонтекстноеМеню" id="80"/>
+					<AutoCommandBar name="УчетныеЗаписиКоманднаяПанель" id="81">
+						<ChildItems>
+							<Button name="УчетныеЗаписиВыбратьСертификат" id="106">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ВыбратьСертификатОрганизации</CommandName>
+								<ExtendedTooltip name="УчетныеЗаписиВыбратьСертификатРасширеннаяПодсказка" id="107"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<SearchStringAddition name="УчетныеЗаписиСтрокаПоиска" id="82"/>
+					<ViewStatusAddition name="УчетныеЗаписиСостояниеПросмотра" id="83"/>
+					<SearchControlAddition name="УчетныеЗаписиУправлениеПоиском" id="84"/>
+					<ChildItems>
+						<InputField name="УчетныеЗаписиОрганизация" id="85">
+							<DataPath>УчетныеЗаписи.Организация</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Организация</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="УчетныеЗаписиОрганизацияКонтекстноеМеню" id="86"/>
+							<ExtendedTooltip name="УчетныеЗаписиОрганизацияРасширеннаяПодсказка" id="87"/>
+						</InputField>
+						<InputField name="УчетныеЗаписиСертификат" id="88">
+							<DataPath>УчетныеЗаписи.Сертификат</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сертификат</v8:content>
+								</v8:item>
+							</Title>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="УчетныеЗаписиСертификатКонтекстноеМеню" id="89"/>
+							<ExtendedTooltip name="УчетныеЗаписиСертификатРасширеннаяПодсказка" id="90"/>
+						</InputField>
+						<InputField name="УчетныеЗаписиТипПодписанта" id="91">
+							<DataPath>УчетныеЗаписи.ТипПодписанта</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Тип подписанта</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Юридическое лицо</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">ЮЛ</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Индивидуальный предприниматель</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">ИП</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Физическое лицо по МЧД</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">ФЛ</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="УчетныеЗаписиТипПодписантаКонтекстноеМеню" id="92"/>
+							<ExtendedTooltip name="УчетныеЗаписиТипПодписантаРасширеннаяПодсказка" id="93"/>
+						</InputField>
+						<InputField name="УчетныеЗаписиДолжностьПодписанта" id="94">
+							<DataPath>УчетныеЗаписи.ДолжностьПодписанта</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Должность подписанта</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="УчетныеЗаписиДолжностьПодписантаКонтекстноеМеню" id="95"/>
+							<ExtendedTooltip name="УчетныеЗаписиДолжностьПодписантаРасширеннаяПодсказка" id="96"/>
+						</InputField>
+						<InputField name="УчетныеЗаписиНомерМЧД" id="97">
+							<DataPath>УчетныеЗаписи.НомерМЧД</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номер МЧД</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="УчетныеЗаписиНомерМЧДКонтекстноеМеню" id="98"/>
+							<ExtendedTooltip name="УчетныеЗаписиНомерМЧДРасширеннаяПодсказка" id="99"/>
+						</InputField>
+						<InputField name="УчетныеЗаписиДатаМЧД" id="100">
+							<DataPath>УчетныеЗаписи.ДатаМЧД</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дата МЧД</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="УчетныеЗаписиДатаМЧДКонтекстноеМеню" id="101"/>
+							<ExtendedTooltip name="УчетныеЗаписиДатаМЧДРасширеннаяПодсказка" id="102"/>
+						</InputField>
+						<InputField name="УчетныеЗаписиИдентификаторУчастника" id="103">
+							<DataPath>УчетныеЗаписи.ИдентификаторУчастника</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Идентификатор участника</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="УчетныеЗаписиИдентификаторУчастникаКонтекстноеМеню" id="104"/>
+							<ExtendedTooltip name="УчетныеЗаписиИдентификаторУчастникаРасширеннаяПодсказка" id="105"/>
+						</InputField>
+					</ChildItems>
+				</Table>
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="ГруппаСлужебное" id="39">
@@ -530,6 +692,80 @@
 				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="УчетныеЗаписи" id="69">
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Организация" id="1">
+					<Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Отпечаток" id="2">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>200</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Сертификат" id="3">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТипПодписанта" id="4">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>2</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДолжностьПодписанта" id="5">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="НомерМЧД" id="6">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаМЧД" id="7">
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторУчастника" id="8">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ЗаписатьНастройки" id="62">
@@ -586,6 +822,15 @@
 				</v8:item>
 			</Title>
 			<Action>ПроверитьСертификат</Action>
+		</Command>
+		<Command name="ВыбратьСертификатОрганизации" id="68">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать сертификат</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ВыбратьСертификатОрганизации</Action>
 		</Command>
 	</Commands>
 </Form>
