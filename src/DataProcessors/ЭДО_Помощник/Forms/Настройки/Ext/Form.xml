@@ -222,6 +222,7 @@
 					<RowFilter xsi:nil="true"/>
 					<ContextMenu name="УчетныеЗаписиКонтекстноеМеню" id="203"/>
 					<AutoCommandBar name="УчетныеЗаписиКоманднаяПанель" id="204">
+						<AutoFill>false</AutoFill>
 						<ChildItems>
 							<Button name="ДобавитьУчетнуюЗапись" id="205">
 								<Type>CommandBarButton</Type>
