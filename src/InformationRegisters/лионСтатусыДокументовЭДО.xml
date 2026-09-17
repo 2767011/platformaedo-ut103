@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<InformationRegister uuid="9b404a95-0972-4385-b569-baf1885207d4">
+		<InternalInfo>
+			<xr:GeneratedType name="InformationRegisterRecord.лионСтатусыДокументовЭДО" category="Record">
+				<xr:TypeId>a1732bab-9eb9-4ed6-aa27-798155fe9381</xr:TypeId>
+				<xr:ValueId>23e8a5ae-46c2-4b7d-8779-415ffffc461d</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterManager.лионСтатусыДокументовЭДО" category="Manager">
+				<xr:TypeId>5bbd175f-d6f1-4d40-86b1-ab9b76a3e2a6</xr:TypeId>
+				<xr:ValueId>6cc800c2-9539-4284-af11-eed50fa79514</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterSelection.лионСтатусыДокументовЭДО" category="Selection">
+				<xr:TypeId>fdc86b7b-ef00-4f94-a105-117ed123ff75</xr:TypeId>
+				<xr:ValueId>11373d0e-3b1d-4309-9843-b583cbceb747</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterList.лионСтатусыДокументовЭДО" category="List">
+				<xr:TypeId>56514502-0a63-4546-93b8-0253e0c36850</xr:TypeId>
+				<xr:ValueId>6e0bab79-c4f8-406a-aa5e-fc1b5d2dca78</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordSet.лионСтатусыДокументовЭДО" category="RecordSet">
+				<xr:TypeId>666ffbf9-3e58-408e-a87c-699592f9d6b8</xr:TypeId>
+				<xr:ValueId>2f906a88-74f7-40f5-8277-084d35be8e3c</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordKey.лионСтатусыДокументовЭДО" category="RecordKey">
+				<xr:TypeId>2a6c3119-357b-4331-80a2-fd328eda7a0d</xr:TypeId>
+				<xr:ValueId>499ac994-01c3-4452-b895-07e4f8524d19</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordManager.лионСтатусыДокументовЭДО" category="RecordManager">
+				<xr:TypeId>8b7a0bda-c933-4379-9d23-fa7a628e92b3</xr:TypeId>
+				<xr:ValueId>c78bf2b0-df5d-47cc-a3e9-face0c083696</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<Name>лионСтатусыДокументовЭДО</Name>
+			<Comment/>
+			<ExtendedConfigurationObject>6ef6c75b-84a7-462d-a814-9bb84d69e866</ExtendedConfigurationObject>
+		</Properties>
+		<ChildObjects>
+			<Dimension uuid="420ec3ce-6971-41d3-a8b5-17e5e7f913a3">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Документ</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>21590d2c-ae09-4895-9a7e-7a9de7af3bb8</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:DocumentRef.КорректировкаРеализации</v8:Type>
+						<v8:Type>cfg:DocumentRef.СчетФактураВыданный</v8:Type>
+						<v8:Type>cfg:DocumentRef.ВозвратТоваровПоставщику</v8:Type>
+						<v8:Type>cfg:DocumentRef.РеализацияТоваровУслуг</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Resource uuid="0af5a3c1-d68e-4d3a-a9ff-ef00b04cee8c">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Статус</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>4fc0d408-b855-4758-934e-ba7ffe140c08</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.лионСтатусДокументаЭДО</v8:Type>
+					</Type>
+				</Properties>
+			</Resource>
+		</ChildObjects>
+	</InformationRegister>
+</MetaDataObject>
