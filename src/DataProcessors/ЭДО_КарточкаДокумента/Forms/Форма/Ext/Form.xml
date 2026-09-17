@@ -40,6 +40,24 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="8"/>
 			<ChildItems>
+				<LabelField name="ОрганизацияКарточкиПредставление" id="153">
+					<DataPath>ОрганизацияКарточкиПредставление</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+					</Title>
+					<ShowTitle>false</ShowTitle>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>От чьего имени карточка ходит к оператору ЭДО.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ContextMenu name="ОрганизацияКарточкиПредставлениеКонтекстноеМеню" id="154"/>
+					<ExtendedTooltip name="ОрганизацияКарточкиПредставлениеРасширеннаяПодсказка" id="155"/>
+				</LabelField>
 				<InputField name="Накладная" id="9">
 					<DataPath>Накладная</DataPath>
 					<ReadOnly>true</ReadOnly>
@@ -530,6 +548,21 @@
 			</Title>
 			<Type>
 				<v8:TypeSet>cfg:DocumentRef</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="ОрганизацияКарточкиПредставление" id="156">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация карточки, представление</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
 		<Attribute name="Накладная" id="104">
