@@ -683,6 +683,11 @@
 					<v8:content>Добавить учетную запись</v8:content>
 				</v8:item>
 			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Representation>TextPicture</Representation>
 			<Action>ДобавитьУчетнуюЗапись</Action>
 		</Command>
 		<Command name="ИзменитьУчетнуюЗапись" id="257">
@@ -692,6 +697,11 @@
 					<v8:content>Изменить учетную запись</v8:content>
 				</v8:item>
 			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.ChangeListItem</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Representation>TextPicture</Representation>
 			<Action>ИзменитьУчетнуюЗапись</Action>
 		</Command>
 		<Command name="УдалитьУчетнуюЗапись" id="258">
@@ -701,6 +711,11 @@
 					<v8:content>Удалить учетную запись</v8:content>
 				</v8:item>
 			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.DeleteListItem</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Representation>TextPicture</Representation>
 			<Action>УдалитьУчетнуюЗапись</Action>
 		</Command>
 		<Command name="ПроверитьГотовностьУчетнойЗаписи" id="259">
