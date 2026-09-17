@@ -124,7 +124,7 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Пусто — действует общий хост API из формы настроек. Меняется только при переезде оператора.</v8:content>
+							<v8:content>Адрес API оператора. Для Платформы — api.platformaofd.ru.</v8:content>
 						</v8:item>
 					</ToolTip>
 					<ContextMenu name="ХостКонтекстноеМеню" id="24"/>
@@ -155,13 +155,17 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Base64. Меняется при КАЖДОМ перевыпуске КЭП: прежний сертификат отзывается.</v8:content>
+							<v8:content>Выберите из сертификатов, установленных у учётки сервера 1С.</v8:content>
 						</v8:item>
 					</ToolTip>
 					<AutoMaxWidth>false</AutoMaxWidth>
 					<HorizontalStretch>true</HorizontalStretch>
+					<ChoiceButton>true</ChoiceButton>
 					<ContextMenu name="ОтпечатокКонтекстноеМеню" id="29"/>
 					<ExtendedTooltip name="ОтпечатокРасширеннаяПодсказка" id="30"/>
+					<Events>
+						<Event name="StartChoice">ОтпечатокНачалоВыбора</Event>
+					</Events>
 				</InputField>
 				<InputField name="СведенияОСертификате" id="31">
 					<DataPath>СведенияОСертификате</DataPath>
@@ -294,6 +298,10 @@
 					<ContextMenu name="НомерМЧДКонтекстноеМеню" id="49"/>
 					<ExtendedTooltip name="НомерМЧДРасширеннаяПодсказка" id="50"/>
 				</InputField>
+				<Button name="ПроверитьМЧД" id="82">
+					<CommandName>Form.Command.ПроверитьМЧД</CommandName>
+					<ExtendedTooltip name="ПроверитьМЧДРасширеннаяПодсказка" id="83"/>
+				</Button>
 				<InputField name="ДатаМЧД" id="51">
 					<DataPath>ДатаМЧД</DataPath>
 					<Title>
@@ -324,13 +332,13 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Идентификатор участника</v8:content>
+							<v8:content>Идентификатор в ЭДО</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Пусто — подставится из свойства организации или по формуле оператора.</v8:content>
+							<v8:content>Номер организации у оператора, по нему получатель видит отправителя. У Платформы строится из ИНН и КПП (2VO-ИНН-КПП…). Заполняется сам — вручную только если оператор выдал другой.</v8:content>
 						</v8:item>
 					</ToolTip>
 					<AutoMaxWidth>false</AutoMaxWidth>
@@ -598,6 +606,15 @@
 				</v8:item>
 			</Title>
 			<Action>ПроверитьСертификат</Action>
+		</Command>
+		<Command name="ПроверитьМЧД" id="84">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить в ФНС</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПроверитьМЧД</Action>
 		</Command>
 	</Commands>
 </Form>
