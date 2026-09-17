@@ -37,34 +37,6 @@
 			<Comment/>
 			<ExtendedConfigurationObject>6ef6c75b-84a7-462d-a814-9bb84d69e866</ExtendedConfigurationObject>
 		</Properties>
-		<ChildObjects>
-			<Dimension uuid="420ec3ce-6971-41d3-a8b5-17e5e7f913a3">
-				<InternalInfo/>
-				<Properties>
-					<ObjectBelonging>Adopted</ObjectBelonging>
-					<Name>Документ</Name>
-					<Comment/>
-					<ExtendedConfigurationObject>21590d2c-ae09-4895-9a7e-7a9de7af3bb8</ExtendedConfigurationObject>
-					<Type>
-						<v8:Type>cfg:DocumentRef.КорректировкаРеализации</v8:Type>
-						<v8:Type>cfg:DocumentRef.СчетФактураВыданный</v8:Type>
-						<v8:Type>cfg:DocumentRef.ВозвратТоваровПоставщику</v8:Type>
-						<v8:Type>cfg:DocumentRef.РеализацияТоваровУслуг</v8:Type>
-					</Type>
-				</Properties>
-			</Dimension>
-			<Resource uuid="0af5a3c1-d68e-4d3a-a9ff-ef00b04cee8c">
-				<InternalInfo/>
-				<Properties>
-					<ObjectBelonging>Adopted</ObjectBelonging>
-					<Name>Статус</Name>
-					<Comment/>
-					<ExtendedConfigurationObject>4fc0d408-b855-4758-934e-ba7ffe140c08</ExtendedConfigurationObject>
-					<Type>
-						<v8:Type>cfg:EnumRef.лионСтатусДокументаЭДО</v8:Type>
-					</Type>
-				</Properties>
-			</Resource>
-		</ChildObjects>
+		<ChildObjects/>
 	</InformationRegister>
 </MetaDataObject>
