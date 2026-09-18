@@ -9,10 +9,15 @@
 	<AutoTitle>false</AutoTitle>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
+			<Button name="ЗаписатьИЗакрыть" id="901">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ЗаписатьИЗакрыть</CommandName>
+				<DefaultButton>true</DefaultButton>
+				<ExtendedTooltip name="ЗаписатьИЗакрытьРасширеннаяПодсказка" id="902"/>
+			</Button>
 			<Button name="Записать" id="1">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.Command.ЗаписатьНастройки</CommandName>
-				<DefaultButton>true</DefaultButton>
 				<ExtendedTooltip name="ЗаписатьРасширеннаяПодсказка" id="2"/>
 			</Button>
 			<Button name="ПроверитьГотовность" id="3">
@@ -59,6 +64,7 @@
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
 	</Events>
 	<ChildItems>
 		<UsualGroup name="ГруппаОбщиеПараметры" id="11">
@@ -639,6 +645,15 @@
 		</Attribute>
 	</Attributes>
 	<Commands>
+		<Command name="ЗаписатьИЗакрыть" id="903">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗаписатьИЗакрыть</Action>
+		</Command>
 		<Command name="ЗаписатьНастройки" id="62">
 			<Title>
 				<v8:item>
