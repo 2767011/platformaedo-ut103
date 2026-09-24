@@ -68,6 +68,40 @@
 					<ContextMenu name="КонтрагентПредставлениеКонтекстноеМеню" id="13"/>
 					<ExtendedTooltip name="КонтрагентПредставлениеРасширеннаяПодсказка" id="14"/>
 				</InputField>
+				<UsualGroup name="ГруппаПауза" id="153">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пауза отправки контрагенту</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<Visible>false</Visible>
+					<ExtendedTooltip name="ГруппаПаузаРасширеннаяПодсказка" id="154"/>
+					<ChildItems>
+						<InputField name="ПаузаОтправки" id="155">
+							<DataPath>ПаузаОтправки</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отправка приостановлена</v8:content>
+								</v8:item>
+							</Title>
+							<ReadOnly>true</ReadOnly>
+							<Width>48</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="ПаузаОтправкиКонтекстноеМеню" id="156"/>
+							<ExtendedTooltip name="ПаузаОтправкиРасширеннаяПодсказка" id="157"/>
+						</InputField>
+						<Button name="КнСнятьПаузу" id="158">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.СнятьПаузу</CommandName>
+							<ExtendedTooltip name="КнСнятьПаузуРасширеннаяПодсказка" id="159"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
 				<InputField name="СтатусСоглашения" id="15">
 					<DataPath>СтатусСоглашения</DataPath>
 					<ReadOnly>true</ReadOnly>
@@ -785,6 +819,15 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="ПаузаОтправки" id="139">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ОтправитьДокумент" id="125">
@@ -912,6 +955,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОтклонитьАннулирование</Action>
+		</Command>
+		<Command name="СнятьПаузу" id="142">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять паузу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Возобновить отправку документов этому контрагенту</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СнятьПаузу</Action>
 		</Command>
 	</Commands>
 	<Parameters>
