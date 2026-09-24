@@ -576,6 +576,17 @@
 							<ContextMenu name="НадписьРазборКонтекстноеМеню" id="153"/>
 							<ExtendedTooltip name="НадписьРазборРасширеннаяПодсказка" id="154"/>
 						</LabelDecoration>
+						<Button name="КнопкаНазадККонтрагентам" id="275">
+							<CommandName>Form.Command.НазадККонтрагентам</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>К списку контрагентов</v8:content>
+								</v8:item>
+							</Title>
+							<Visible>false</Visible>
+							<ExtendedTooltip name="КнопкаНазадККонтрагентамРасширеннаяПодсказка" id="276"/>
+						</Button>
 						<Table name="ТаблицаДокументов" id="155">
 							<DataPath>Документы</DataPath>
 							<CommandBarLocation>Top</CommandBarLocation>
@@ -696,6 +707,18 @@
 									<Width>30</Width>
 									<ContextMenu name="ДокСостояниеКонтекстноеМеню" id="184"/>
 									<ExtendedTooltip name="ДокСостояниеРасширеннаяПодсказка" id="185"/>
+								</InputField>
+								<InputField name="ДокИдОператора" id="272">
+									<DataPath>Документы.ИдОператора</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ид у оператора</v8:content>
+										</v8:item>
+									</Title>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="ДокИдОператораКонтекстноеМеню" id="273"/>
+									<ExtendedTooltip name="ДокИдОператораРасширеннаяПодсказка" id="274"/>
 								</InputField>
 								<InputField name="ДокПричина" id="269">
 									<DataPath>Документы.Причина</DataPath>
@@ -1221,6 +1244,21 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
+				<Column name="ИдОператора" id="272">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ид у оператора</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
 			</Columns>
 		</Attribute>
 		<Attribute name="СписокКонтрагентов" id="252">
@@ -1327,6 +1365,15 @@
 				</Column>
 			</Columns>
 		</Attribute>
+		<Attribute name="ПризнакРазбора" id="273">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="Обновить" id="261">
@@ -1379,6 +1426,15 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОтправитьВыделенныеВыполнить</Action>
+		</Command>
+		<Command name="НазадККонтрагентам" id="268">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>К списку контрагентов</v8:content>
+				</v8:item>
+			</Title>
+			<Action>НазадККонтрагентамВыполнить</Action>
 		</Command>
 	</Commands>
 </Form>
