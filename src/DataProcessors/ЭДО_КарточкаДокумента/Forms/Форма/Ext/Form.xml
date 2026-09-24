@@ -281,6 +281,17 @@
 								</Title>
 								<ExtendedTooltip name="КнАннулироватьРасширеннаяПодсказка" id="143"/>
 							</Button>
+							<Button name="КнОтправитьИсправление" id="160">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ОтправитьИсправление</CommandName>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Отправить исправление (ИУПД)</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="КнОтправитьИсправлениеРасширеннаяПодсказка" id="161"/>
+							</Button>
 						</ChildItems>
 					</AutoCommandBar>
 					<ExtendedTooltip name="ИсторияРасширеннаяПодсказка" id="37"/>
@@ -970,6 +981,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СнятьПаузу</Action>
+		</Command>
+		<Command name="ОтправитьИсправление" id="155">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить исправление (ИУПД)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить исправительный УПД к выбранному экземпляру: номер и дата счета-фактуры те же, состав по текущему документу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтправитьИсправление</Action>
 		</Command>
 	</Commands>
 	<Parameters>
