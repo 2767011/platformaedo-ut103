@@ -786,6 +786,32 @@
 									<ContextMenu name="КаСуммаКонтекстноеМеню" id="206"/>
 									<ExtendedTooltip name="КаСуммаРасширеннаяПодсказка" id="207"/>
 								</InputField>
+								<InputField name="КаОтправлено" id="280">
+									<DataPath>СписокКонтрагентов.Отправлено</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отправлено</v8:content>
+										</v8:item>
+									</Title>
+									<ReadOnly>true</ReadOnly>
+									<Width>8</Width>
+									<ContextMenu name="КаОтправленоКонтекстноеМеню" id="281"/>
+									<ExtendedTooltip name="КаОтправленоРасширеннаяПодсказка" id="282"/>
+								</InputField>
+								<InputField name="КаНеПодписано" id="283">
+									<DataPath>СписокКонтрагентов.НеПодписано</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Не подписано</v8:content>
+										</v8:item>
+									</Title>
+									<ReadOnly>true</ReadOnly>
+									<Width>8</Width>
+									<ContextMenu name="КаНеПодписаноКонтекстноеМеню" id="284"/>
+									<ExtendedTooltip name="КаНеПодписаноРасширеннаяПодсказка" id="285"/>
+								</InputField>
 								<InputField name="КаАдрес" id="208">
 									<DataPath>СписокКонтрагентов.Адрес</DataPath>
 									<Title>
@@ -798,6 +824,19 @@
 									<Width>24</Width>
 									<ContextMenu name="КаАдресКонтекстноеМеню" id="209"/>
 									<ExtendedTooltip name="КаАдресРасширеннаяПодсказка" id="210"/>
+								</InputField>
+								<InputField name="КаОператор" id="286">
+									<DataPath>СписокКонтрагентов.Оператор</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Оператор</v8:content>
+										</v8:item>
+									</Title>
+									<ReadOnly>true</ReadOnly>
+									<Width>16</Width>
+									<ContextMenu name="КаОператорКонтекстноеМеню" id="287"/>
+									<ExtendedTooltip name="КаОператорРасширеннаяПодсказка" id="288"/>
 								</InputField>
 								<InputField name="КаСтатусСвязи" id="211">
 									<DataPath>СписокКонтрагентов.СтатусСвязи</DataPath>
@@ -1255,6 +1294,35 @@
 				<Column name="АдресЗакреплен" id="260">
 					<Type>
 						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Оператор" id="290">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Отправлено" id="291">
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="НеПодписано" id="292">
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
 					</Type>
 				</Column>
 			</Columns>
