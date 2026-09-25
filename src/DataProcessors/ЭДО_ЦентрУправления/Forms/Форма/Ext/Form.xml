@@ -788,6 +788,25 @@
 									<ContextMenu name="ПрДатаОтветаКонтекстноеМеню" id="356"/>
 									<ExtendedTooltip name="ПрДатаОтветаРасширеннаяПодсказка" id="357"/>
 								</InputField>
+								<InputField name="ПрЯщиков" id="394">
+									<DataPath>Приглашения.Ящиков</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ящиков</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сколько ящиков ЭДО у этого ИНН. Больше одного - двойной щелчок по строке покажет все с их состояниями.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ReadOnly>true</ReadOnly>
+									<Width>8</Width>
+									<ContextMenu name="ПрЯщиковКонтекстноеМеню" id="395"/>
+									<ExtendedTooltip name="ПрЯщиковРасширеннаяПодсказка" id="396"/>
+								</InputField>
 								<InputField name="ПрДокументов" id="358">
 									<DataPath>Приглашения.Документов</DataPath>
 									<Title>
