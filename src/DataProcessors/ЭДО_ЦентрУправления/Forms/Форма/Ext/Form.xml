@@ -646,6 +646,11 @@
 							<ContextMenu name="ТаблицаПриглашенияКонтекстноеМеню" id="325"/>
 							<AutoCommandBar name="ТаблицаПриглашенияКоманднаяПанель" id="326">
 								<ChildItems>
+									<Button name="КнопкаПриглЗаполнить" id="391">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ЗаполнитьПриглашения</CommandName>
+										<ExtendedTooltip name="КнопкаПриглЗаполнитьРасширеннаяПодсказка" id="392"/>
+									</Button>
 									<Button name="КнопкаПриглОбновитьСостояние" id="361">
 										<Type>CommandBarButton</Type>
 										<CommandName>Form.Command.ОбновитьСостоянияПриглашений</CommandName>
@@ -1872,6 +1877,21 @@
 			</Title>
 			<Action>НазадККонтрагентамВыполнить</Action>
 		</Command>
+	<Command name="ЗаполнитьПриглашения" id="393">
+		<Title>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Заполнить список</v8:content>
+			</v8:item>
+		</Title>
+		<ToolTip>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Собрать список контрагентов и их состояния. Считается не при открытии формы: на большой базе это десятки секунд.</v8:content>
+			</v8:item>
+		</ToolTip>
+		<Action>ЗаполнитьПриглашенияВыполнить</Action>
+	</Command>
 	<Command name="ОбновитьСостоянияПриглашений" id="388">
 		<Title>
 			<v8:item>
