@@ -1752,6 +1752,16 @@
 					</v8:NumberQualifiers>
 				</Type>
 			</Column>
+			<Column name="Ящиков" id="397">
+				<Type>
+					<v8:Type>xs:decimal</v8:Type>
+					<v8:NumberQualifiers>
+						<v8:Digits>5</v8:Digits>
+						<v8:FractionDigits>0</v8:FractionDigits>
+						<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+					</v8:NumberQualifiers>
+				</Type>
+			</Column>
 			</Columns>
 		</Attribute>
 		<Attribute name="ПриглашенияВсе" id="379">
@@ -1829,6 +1839,16 @@
 						<v8:Digits>10</v8:Digits>
 						<v8:FractionDigits>0</v8:FractionDigits>
 						<v8:AllowedSign>Any</v8:AllowedSign>
+					</v8:NumberQualifiers>
+				</Type>
+			</Column>
+			<Column name="Ящиков" id="398">
+				<Type>
+					<v8:Type>xs:decimal</v8:Type>
+					<v8:NumberQualifiers>
+						<v8:Digits>5</v8:Digits>
+						<v8:FractionDigits>0</v8:FractionDigits>
+						<v8:AllowedSign>Nonnegative</v8:AllowedSign>
 					</v8:NumberQualifiers>
 				</Type>
 			</Column>
