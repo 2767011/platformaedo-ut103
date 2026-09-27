@@ -444,146 +444,6 @@
 								</UsualGroup>
 							</ChildItems>
 						</UsualGroup>
-						<UsualGroup name="ГруппаАдреса" id="68">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Адреса контрагента в реестре ФНС</v8:content>
-								</v8:item>
-							</Title>
-							<Group>Vertical</Group>
-							<Representation>None</Representation>
-							<ShowTitle>true</ShowTitle>
-							<ExtendedTooltip name="ГруппаАдресаРасширеннаяПодсказка" id="69"/>
-							<ChildItems>
-								<Table name="Адреса" id="70">
-									<ChangeRowSet>false</ChangeRowSet>
-									<ChangeRowOrder>false</ChangeRowOrder>
-									<Height>5</Height>
-									<DataPath>Адреса</DataPath>
-									<RowFilter xsi:nil="true"/>
-									<ContextMenu name="АдресаКонтекстноеМеню" id="71"/>
-									<AutoCommandBar name="АдресаКоманднаяПанель" id="72">
-										<ChildItems>
-											<Button name="КнПоказатьАдреса" id="73">
-												<Type>CommandBarButton</Type>
-												<CommandName>Form.Command.ПоказатьАдреса</CommandName>
-												<Title>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>Обновить список</v8:content>
-													</v8:item>
-												</Title>
-												<ExtendedTooltip name="КнПоказатьАдресаРасширеннаяПодсказка" id="74"/>
-											</Button>
-											<Button name="КнПривязатьАдрес" id="75">
-												<Type>CommandBarButton</Type>
-												<CommandName>Form.Command.ПривязатьАдрес</CommandName>
-												<Title>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>Привязать выбранный</v8:content>
-													</v8:item>
-												</Title>
-												<ExtendedTooltip name="КнПривязатьАдресРасширеннаяПодсказка" id="76"/>
-											</Button>
-										</ChildItems>
-									</AutoCommandBar>
-									<ExtendedTooltip name="АдресаРасширеннаяПодсказка" id="77"/>
-									<SearchStringAddition name="АдресаСтрокаПоиска" id="78">
-										<AdditionSource>
-											<Item>Адреса</Item>
-											<Type>SearchStringRepresentation</Type>
-										</AdditionSource>
-										<ContextMenu name="АдресаСтрокаПоискаКонтекстноеМеню" id="79"/>
-										<ExtendedTooltip name="АдресаСтрокаПоискаРасширеннаяПодсказка" id="80"/>
-									</SearchStringAddition>
-									<ViewStatusAddition name="АдресаСостояниеПросмотра" id="81">
-										<AdditionSource>
-											<Item>Адреса</Item>
-											<Type>ViewStatusRepresentation</Type>
-										</AdditionSource>
-										<ContextMenu name="АдресаСостояниеПросмотраКонтекстноеМеню" id="82"/>
-										<ExtendedTooltip name="АдресаСостояниеПросмотраРасширеннаяПодсказка" id="83"/>
-									</ViewStatusAddition>
-									<SearchControlAddition name="АдресаУправлениеПоиском" id="84">
-										<AdditionSource>
-											<Item>Адреса</Item>
-											<Type>SearchControl</Type>
-										</AdditionSource>
-										<ContextMenu name="АдресаУправлениеПоискомКонтекстноеМеню" id="85"/>
-										<ExtendedTooltip name="АдресаУправлениеПоискомРасширеннаяПодсказка" id="86"/>
-									</SearchControlAddition>
-									<ChildItems>
-										<InputField name="КолонкаТекущий" id="87">
-											<DataPath>Адреса.Текущий</DataPath>
-											<ReadOnly>true</ReadOnly>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Тек.</v8:content>
-												</v8:item>
-											</Title>
-											<Width>5</Width>
-											<ContextMenu name="КолонкаТекущийКонтекстноеМеню" id="88"/>
-											<ExtendedTooltip name="КолонкаТекущийРасширеннаяПодсказка" id="89"/>
-										</InputField>
-										<InputField name="КолонкаАдрес" id="90">
-											<DataPath>Адреса.Адрес</DataPath>
-											<ReadOnly>true</ReadOnly>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Идентификатор</v8:content>
-												</v8:item>
-											</Title>
-											<Width>48</Width>
-											<ContextMenu name="КолонкаАдресКонтекстноеМеню" id="91"/>
-											<ExtendedTooltip name="КолонкаАдресРасширеннаяПодсказка" id="92"/>
-										</InputField>
-										<InputField name="КолонкаОператор" id="93">
-											<DataPath>Адреса.Оператор</DataPath>
-											<ReadOnly>true</ReadOnly>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Оператор</v8:content>
-												</v8:item>
-											</Title>
-											<Width>22</Width>
-											<ContextMenu name="КолонкаОператорКонтекстноеМеню" id="94"/>
-											<ExtendedTooltip name="КолонкаОператорРасширеннаяПодсказка" id="95"/>
-										</InputField>
-										<InputField name="КолонкаСвязь" id="96">
-											<DataPath>Адреса.Связь</DataPath>
-											<ReadOnly>true</ReadOnly>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Связь</v8:content>
-												</v8:item>
-											</Title>
-											<Width>18</Width>
-											<ContextMenu name="КолонкаСвязьКонтекстноеМеню" id="97"/>
-											<ExtendedTooltip name="КолонкаСвязьРасширеннаяПодсказка" id="98"/>
-										</InputField>
-										<InputField name="КолонкаНаименование" id="99">
-											<DataPath>Адреса.Наименование</DataPath>
-											<ReadOnly>true</ReadOnly>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Наименование в реестре</v8:content>
-												</v8:item>
-											</Title>
-											<Width>50</Width>
-											<ContextMenu name="КолонкаНаименованиеКонтекстноеМеню" id="100"/>
-											<ExtendedTooltip name="КолонкаНаименованиеРасширеннаяПодсказка" id="101"/>
-										</InputField>
-									</ChildItems>
-								</Table>
-							</ChildItems>
-						</UsualGroup>
 						<UsualGroup name="ГруппаДокументыКонтрагента" id="208">
 							<Title>
 								<v8:item>
@@ -724,6 +584,158 @@
 											<Width>18</Width>
 											<ContextMenu name="ДокументыКонтрагентаОператорКонтекстноеМеню" id="243"/>
 											<ExtendedTooltip name="ДокументыКонтрагентаОператорРасширеннаяПодсказка" id="244"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаОператоры" id="245">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Операторы</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="СтраницаОператорыРасширеннаяПодсказка" id="246"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаАдреса" id="68">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Адреса контрагента в реестре ФНС</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>true</ShowTitle>
+							<ExtendedTooltip name="ГруппаАдресаРасширеннаяПодсказка" id="69"/>
+							<ChildItems>
+								<Table name="Адреса" id="70">
+									<ChangeRowSet>false</ChangeRowSet>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<Height>12</Height>
+									<DataPath>Адреса</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="АдресаКонтекстноеМеню" id="71"/>
+									<AutoCommandBar name="АдресаКоманднаяПанель" id="72">
+										<ChildItems>
+											<Button name="КнПоказатьАдреса" id="73">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ПоказатьАдреса</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Обновить список</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="КнПоказатьАдресаРасширеннаяПодсказка" id="74"/>
+											</Button>
+											<Button name="КнПривязатьАдрес" id="75">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ПривязатьАдрес</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Привязать выбранный</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="КнПривязатьАдресРасширеннаяПодсказка" id="76"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="АдресаРасширеннаяПодсказка" id="77"/>
+									<SearchStringAddition name="АдресаСтрокаПоиска" id="78">
+										<AdditionSource>
+											<Item>Адреса</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="АдресаСтрокаПоискаКонтекстноеМеню" id="79"/>
+										<ExtendedTooltip name="АдресаСтрокаПоискаРасширеннаяПодсказка" id="80"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="АдресаСостояниеПросмотра" id="81">
+										<AdditionSource>
+											<Item>Адреса</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="АдресаСостояниеПросмотраКонтекстноеМеню" id="82"/>
+										<ExtendedTooltip name="АдресаСостояниеПросмотраРасширеннаяПодсказка" id="83"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="АдресаУправлениеПоиском" id="84">
+										<AdditionSource>
+											<Item>Адреса</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="АдресаУправлениеПоискомКонтекстноеМеню" id="85"/>
+										<ExtendedTooltip name="АдресаУправлениеПоискомРасширеннаяПодсказка" id="86"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<InputField name="КолонкаТекущий" id="87">
+											<DataPath>Адреса.Текущий</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Тек.</v8:content>
+												</v8:item>
+											</Title>
+											<Width>5</Width>
+											<ContextMenu name="КолонкаТекущийКонтекстноеМеню" id="88"/>
+											<ExtendedTooltip name="КолонкаТекущийРасширеннаяПодсказка" id="89"/>
+										</InputField>
+										<InputField name="КолонкаАдрес" id="90">
+											<DataPath>Адреса.Адрес</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Идентификатор</v8:content>
+												</v8:item>
+											</Title>
+											<Width>48</Width>
+											<ContextMenu name="КолонкаАдресКонтекстноеМеню" id="91"/>
+											<ExtendedTooltip name="КолонкаАдресРасширеннаяПодсказка" id="92"/>
+										</InputField>
+										<InputField name="КолонкаОператор" id="93">
+											<DataPath>Адреса.Оператор</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Оператор</v8:content>
+												</v8:item>
+											</Title>
+											<Width>22</Width>
+											<ContextMenu name="КолонкаОператорКонтекстноеМеню" id="94"/>
+											<ExtendedTooltip name="КолонкаОператорРасширеннаяПодсказка" id="95"/>
+										</InputField>
+										<InputField name="КолонкаСвязь" id="96">
+											<DataPath>Адреса.Связь</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Связь</v8:content>
+												</v8:item>
+											</Title>
+											<Width>18</Width>
+											<ContextMenu name="КолонкаСвязьКонтекстноеМеню" id="97"/>
+											<ExtendedTooltip name="КолонкаСвязьРасширеннаяПодсказка" id="98"/>
+										</InputField>
+										<InputField name="КолонкаНаименование" id="99">
+											<DataPath>Адреса.Наименование</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Наименование в реестре</v8:content>
+												</v8:item>
+											</Title>
+											<Width>50</Width>
+											<ContextMenu name="КолонкаНаименованиеКонтекстноеМеню" id="100"/>
+											<ExtendedTooltip name="КолонкаНаименованиеРасширеннаяПодсказка" id="101"/>
 										</InputField>
 									</ChildItems>
 								</Table>
@@ -1064,6 +1076,11 @@
 			</Type>
 		</Attribute>
 		<Attribute name="ДокументыКонтрагентаЗагружены" id="173">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресаЗагружены" id="247">
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
