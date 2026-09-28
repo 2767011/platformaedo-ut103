@@ -602,6 +602,11 @@
 										<CommandName>Form.Command.ОтправитьВыделенные</CommandName>
 										<ExtendedTooltip name="КнопкаОтправитьВыделенныеРасширеннаяПодсказка" id="266"/>
 									</Button>
+									<Button name="КнопкаПроверитьКодыМаркировки" id="500">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПроверитьКодыМаркировки</CommandName>
+										<ExtendedTooltip name="КнопкаПроверитьКодыМаркировкиРасширеннаяПодсказка" id="501"/>
+									</Button>
 								</ChildItems>
 							</AutoCommandBar>
 							<ExtendedTooltip name="ТаблицаДокументовРасширеннаяПодсказка" id="158"/>
@@ -1552,6 +1557,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОтправитьВыделенныеВыполнить</Action>
+		</Command>
+		<Command name="ПроверитьКодыМаркировки" id="502">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить коды в Честном знаке</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сверить коды маркировки выделенных документов с Честным знаком. Только показ, ничего не меняет и не влияет на отправку.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверитьКодыМаркировкиВыполнить</Action>
 		</Command>
 		<Command name="НазадККонтрагентам" id="268">
 			<Title>
