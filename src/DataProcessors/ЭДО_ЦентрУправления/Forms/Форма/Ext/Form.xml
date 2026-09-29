@@ -559,6 +559,274 @@
 						</Table>
 					</ChildItems>
 				</Page>
+				<Page name="СтраницаПриглашения" id="600">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приглашения</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="СтраницаПриглашенияРасширеннаяПодсказка" id="601"/>
+					<ChildItems>
+						<LabelDecoration name="НадписьПриглашения" id="602">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Считаются контрагенты с отгрузками за период. Адрес и оператор берутся из собственного адреса контрагента или из кэша кандидатов; состояние связи - из кэша, обновляемого опросом оператора (кнопка Обновить состояние)</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьПриглашенияКонтекстноеМеню" id="603"/>
+							<ExtendedTooltip name="НадписьПриглашенияРасширеннаяПодсказка" id="604"/>
+						</LabelDecoration>
+						<Table name="ТаблицаПриглашенияСводка" id="605">
+							<DataPath>ПриглашенияСводка</DataPath>
+							<CommandBarLocation>None</CommandBarLocation>
+							<Height>8</Height>
+							<ContextMenu name="ТаблицаПриглашенияСводкаКонтекстноеМеню" id="606"/>
+							<AutoCommandBar name="ТаблицаПриглашенияСводкаКоманднаяПанель" id="607"/>
+							<ExtendedTooltip name="ТаблицаПриглашенияСводкаРасширеннаяПодсказка" id="608"/>
+							<SearchStringAddition name="ТаблицаПриглашенияСводкаСтрокаПоиска" id="609">
+								<AdditionSource>
+									<Item>ТаблицаПриглашенияСводка</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаПриглашенияСводкаСтрокаПоискаКонтекстноеМеню" id="610"/>
+								<ExtendedTooltip name="ТаблицаПриглашенияСводкаСтрокаПоискаРасширеннаяПодсказка" id="611"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТаблицаПриглашенияСводкаСостояниеПросмотра" id="612">
+								<AdditionSource>
+									<Item>ТаблицаПриглашенияСводка</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаПриглашенияСводкаСостояниеПросмотраКонтекстноеМеню" id="613"/>
+								<ExtendedTooltip name="ТаблицаПриглашенияСводкаСостояниеПросмотраРасширеннаяПодсказка" id="614"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТаблицаПриглашенияСводкаУправлениеПоиском" id="615">
+								<AdditionSource>
+									<Item>ТаблицаПриглашенияСводка</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаПриглашенияСводкаУправлениеПоискомКонтекстноеМеню" id="616"/>
+								<ExtendedTooltip name="ТаблицаПриглашенияСводкаУправлениеПоискомРасширеннаяПодсказка" id="617"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ТаблицаПриглашенияСводкаВыбор</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ПрСвСостояние" id="618">
+									<DataPath>ПриглашенияСводка.Состояние</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Состояние</v8:content>
+										</v8:item>
+									</Title>
+									<ReadOnly>true</ReadOnly>
+									<Width>40</Width>
+									<ContextMenu name="ПрСвСостояниеКонтекстноеМеню" id="619"/>
+									<ExtendedTooltip name="ПрСвСостояниеРасширеннаяПодсказка" id="620"/>
+								</InputField>
+								<InputField name="ПрСвКоличество" id="621">
+									<DataPath>ПриглашенияСводка.Количество</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Контрагентов</v8:content>
+										</v8:item>
+									</Title>
+									<ReadOnly>true</ReadOnly>
+									<Width>14</Width>
+									<ContextMenu name="ПрСвКоличествоКонтекстноеМеню" id="622"/>
+									<ExtendedTooltip name="ПрСвКоличествоРасширеннаяПодсказка" id="623"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<Table name="ТаблицаПриглашения" id="624">
+							<DataPath>Приглашения</DataPath>
+							<CommandBarLocation>Top</CommandBarLocation>
+							<Height>18</Height>
+							<ContextMenu name="ТаблицаПриглашенияКонтекстноеМеню" id="625"/>
+							<AutoCommandBar name="ТаблицаПриглашенияКоманднаяПанель" id="626">
+								<ChildItems>
+									<Button name="КнопкаПриглЗаполнить" id="627">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ЗаполнитьПриглашения</CommandName>
+										<ExtendedTooltip name="КнопкаПриглЗаполнитьРасширеннаяПодсказка" id="628"/>
+									</Button>
+									<Button name="КнопкаПриглОбновитьСостояние" id="629">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОбновитьСостоянияПриглашений</CommandName>
+										<ExtendedTooltip name="КнопкаПриглОбновитьСостояниеРасширеннаяПодсказка" id="630"/>
+									</Button>
+									<Button name="КнопкаПригласитьВыделенные" id="631">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПригласитьВыделенные</CommandName>
+										<ExtendedTooltip name="КнопкаПригласитьВыделенныеРасширеннаяПодсказка" id="632"/>
+									</Button>
+									<Button name="КнопкаПригласитьВсехНеЗваных" id="633">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПригласитьВсехНеЗваных</CommandName>
+										<ExtendedTooltip name="КнопкаПригласитьВсехНеЗваныхРасширеннаяПодсказка" id="634"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ТаблицаПриглашенияРасширеннаяПодсказка" id="635"/>
+							<SearchStringAddition name="ТаблицаПриглашенияСтрокаПоиска" id="636">
+								<AdditionSource>
+									<Item>ТаблицаПриглашения</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаПриглашенияСтрокаПоискаКонтекстноеМеню" id="637"/>
+								<ExtendedTooltip name="ТаблицаПриглашенияСтрокаПоискаРасширеннаяПодсказка" id="638"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТаблицаПриглашенияСостояниеПросмотра" id="639">
+								<AdditionSource>
+									<Item>ТаблицаПриглашения</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаПриглашенияСостояниеПросмотраКонтекстноеМеню" id="640"/>
+								<ExtendedTooltip name="ТаблицаПриглашенияСостояниеПросмотраРасширеннаяПодсказка" id="641"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТаблицаПриглашенияУправлениеПоиском" id="642">
+								<AdditionSource>
+									<Item>ТаблицаПриглашения</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаПриглашенияУправлениеПоискомКонтекстноеМеню" id="643"/>
+								<ExtendedTooltip name="ТаблицаПриглашенияУправлениеПоискомРасширеннаяПодсказка" id="644"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ТаблицаПриглашенияВыбор</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ПрКонтрагент" id="645">
+									<DataPath>Приглашения.Контрагент</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Контрагент</v8:content>
+										</v8:item>
+									</Title>
+									<ReadOnly>true</ReadOnly>
+									<Width>32</Width>
+									<ContextMenu name="ПрКонтрагентКонтекстноеМеню" id="646"/>
+									<ExtendedTooltip name="ПрКонтрагентРасширеннаяПодсказка" id="647"/>
+								</InputField>
+								<InputField name="ПрИНН" id="648">
+									<DataPath>Приглашения.ИНН</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ИНН</v8:content>
+										</v8:item>
+									</Title>
+									<ReadOnly>true</ReadOnly>
+									<Width>12</Width>
+									<ContextMenu name="ПрИННКонтекстноеМеню" id="649"/>
+									<ExtendedTooltip name="ПрИННРасширеннаяПодсказка" id="650"/>
+								</InputField>
+								<InputField name="ПрАдрес" id="651">
+									<DataPath>Приглашения.Адрес</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Адрес ЭДО</v8:content>
+										</v8:item>
+									</Title>
+									<ReadOnly>true</ReadOnly>
+									<Width>24</Width>
+									<ContextMenu name="ПрАдресКонтекстноеМеню" id="652"/>
+									<ExtendedTooltip name="ПрАдресРасширеннаяПодсказка" id="653"/>
+								</InputField>
+								<InputField name="ПрОператор" id="654">
+									<DataPath>Приглашения.Оператор</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Оператор</v8:content>
+										</v8:item>
+									</Title>
+									<ReadOnly>true</ReadOnly>
+									<Width>16</Width>
+									<ContextMenu name="ПрОператорКонтекстноеМеню" id="655"/>
+									<ExtendedTooltip name="ПрОператорРасширеннаяПодсказка" id="656"/>
+								</InputField>
+								<InputField name="ПрСостояние" id="657">
+									<DataPath>Приглашения.Состояние</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Состояние</v8:content>
+										</v8:item>
+									</Title>
+									<ReadOnly>true</ReadOnly>
+									<Width>24</Width>
+									<ContextMenu name="ПрСостояниеКонтекстноеМеню" id="658"/>
+									<ExtendedTooltip name="ПрСостояниеРасширеннаяПодсказка" id="659"/>
+								</InputField>
+								<InputField name="ПрДатаПриглашения" id="660">
+									<DataPath>Приглашения.ДатаПриглашения</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата приглашения</v8:content>
+										</v8:item>
+									</Title>
+									<ReadOnly>true</ReadOnly>
+									<Width>14</Width>
+									<ContextMenu name="ПрДатаПриглашенияКонтекстноеМеню" id="661"/>
+									<ExtendedTooltip name="ПрДатаПриглашенияРасширеннаяПодсказка" id="662"/>
+								</InputField>
+								<InputField name="ПрДатаОтвета" id="663">
+									<DataPath>Приглашения.ДатаОтвета</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата ответа</v8:content>
+										</v8:item>
+									</Title>
+									<ReadOnly>true</ReadOnly>
+									<Width>14</Width>
+									<ContextMenu name="ПрДатаОтветаКонтекстноеМеню" id="664"/>
+									<ExtendedTooltip name="ПрДатаОтветаРасширеннаяПодсказка" id="665"/>
+								</InputField>
+								<InputField name="ПрЯщиков" id="666">
+									<DataPath>Приглашения.Ящиков</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ящиков</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сколько ящиков ЭДО у этого ИНН. Больше одного - двойной щелчок по строке покажет все с их состояниями.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ReadOnly>true</ReadOnly>
+									<Width>8</Width>
+									<ContextMenu name="ПрЯщиковКонтекстноеМеню" id="667"/>
+									<ExtendedTooltip name="ПрЯщиковРасширеннаяПодсказка" id="668"/>
+								</InputField>
+								<InputField name="ПрДокументов" id="669">
+									<DataPath>Приглашения.Документов</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Документов</v8:content>
+										</v8:item>
+									</Title>
+									<ReadOnly>true</ReadOnly>
+									<Width>10</Width>
+									<ContextMenu name="ПрДокументовКонтекстноеМеню" id="670"/>
+									<ExtendedTooltip name="ПрДокументовРасширеннаяПодсказка" id="671"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
 				<Page name="СтраницаРазбор" id="150">
 					<Title>
 						<v8:item>
@@ -1505,6 +1773,218 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="ПриглашенияСводка" id="672">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Приглашения сводка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Состояние" id="673">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Количество" id="674">
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Приглашения" id="675">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Приглашения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+			<Column name="Контрагент" id="676">
+				<Type>
+					<v8:TypeId>818be37a-c184-545b-aad6-991049f50ebf</v8:TypeId>
+				</Type>
+			</Column>
+			<Column name="ИНН" id="677">
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>20</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+			</Column>
+			<Column name="Адрес" id="678">
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>50</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+			</Column>
+			<Column name="Оператор" id="679">
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>50</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+			</Column>
+			<Column name="Состояние" id="680">
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>50</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+			</Column>
+			<Column name="ДатаПриглашения" id="681">
+				<Type>
+					<v8:Type>xs:dateTime</v8:Type>
+					<v8:DateQualifiers>
+						<v8:DateFractions>DateTime</v8:DateFractions>
+					</v8:DateQualifiers>
+				</Type>
+			</Column>
+			<Column name="ДатаОтвета" id="682">
+				<Type>
+					<v8:Type>xs:dateTime</v8:Type>
+					<v8:DateQualifiers>
+						<v8:DateFractions>DateTime</v8:DateFractions>
+					</v8:DateQualifiers>
+				</Type>
+			</Column>
+			<Column name="Ящиков" id="697">
+				<Type>
+					<v8:Type>xs:decimal</v8:Type>
+					<v8:NumberQualifiers>
+						<v8:Digits>5</v8:Digits>
+						<v8:FractionDigits>0</v8:FractionDigits>
+						<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+					</v8:NumberQualifiers>
+				</Type>
+			</Column>
+			<Column name="Документов" id="683">
+				<Type>
+					<v8:Type>xs:decimal</v8:Type>
+					<v8:NumberQualifiers>
+						<v8:Digits>10</v8:Digits>
+						<v8:FractionDigits>0</v8:FractionDigits>
+						<v8:AllowedSign>Any</v8:AllowedSign>
+					</v8:NumberQualifiers>
+				</Type>
+			</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПриглашенияВсе" id="684">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Приглашения все</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+			<Column name="Контрагент" id="685">
+				<Type>
+					<v8:TypeId>818be37a-c184-545b-aad6-991049f50ebf</v8:TypeId>
+				</Type>
+			</Column>
+			<Column name="ИНН" id="686">
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>20</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+			</Column>
+			<Column name="Адрес" id="687">
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>50</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+			</Column>
+			<Column name="Оператор" id="688">
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>50</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+			</Column>
+			<Column name="Состояние" id="689">
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>50</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+			</Column>
+			<Column name="ДатаПриглашения" id="690">
+				<Type>
+					<v8:Type>xs:dateTime</v8:Type>
+					<v8:DateQualifiers>
+						<v8:DateFractions>DateTime</v8:DateFractions>
+					</v8:DateQualifiers>
+				</Type>
+			</Column>
+			<Column name="ДатаОтвета" id="691">
+				<Type>
+					<v8:Type>xs:dateTime</v8:Type>
+					<v8:DateQualifiers>
+						<v8:DateFractions>DateTime</v8:DateFractions>
+					</v8:DateQualifiers>
+				</Type>
+			</Column>
+			<Column name="Ящиков" id="698">
+				<Type>
+					<v8:Type>xs:decimal</v8:Type>
+					<v8:NumberQualifiers>
+						<v8:Digits>5</v8:Digits>
+						<v8:FractionDigits>0</v8:FractionDigits>
+						<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+					</v8:NumberQualifiers>
+				</Type>
+			</Column>
+			<Column name="Документов" id="692">
+				<Type>
+					<v8:Type>xs:decimal</v8:Type>
+					<v8:NumberQualifiers>
+						<v8:Digits>10</v8:Digits>
+						<v8:FractionDigits>0</v8:FractionDigits>
+						<v8:AllowedSign>Any</v8:AllowedSign>
+					</v8:NumberQualifiers>
+				</Type>
+			</Column>
+			</Columns>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="Обновить" id="261">
@@ -1582,5 +2062,47 @@
 			</Title>
 			<Action>НазадККонтрагентамВыполнить</Action>
 		</Command>
+	<Command name="ЗаполнитьПриглашения" id="693">
+		<Title>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Заполнить список</v8:content>
+			</v8:item>
+		</Title>
+		<ToolTip>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Собрать список контрагентов и их состояния. Считается не при открытии формы: на большой базе это десятки секунд.</v8:content>
+			</v8:item>
+		</ToolTip>
+		<Action>ЗаполнитьПриглашенияВыполнить</Action>
+	</Command>
+	<Command name="ОбновитьСостоянияПриглашений" id="694">
+		<Title>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Обновить состояние</v8:content>
+			</v8:item>
+		</Title>
+		<Action>ОбновитьСостоянияПриглашенийВыполнить</Action>
+	</Command>
+	<Command name="ПригласитьВыделенные" id="695">
+		<Title>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Пригласить выделенных</v8:content>
+			</v8:item>
+		</Title>
+		<Action>ПригласитьВыделенныеВыполнить</Action>
+	</Command>
+	<Command name="ПригласитьВсехНеЗваных" id="696">
+		<Title>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Пригласить всех, кому не звали</v8:content>
+			</v8:item>
+		</Title>
+		<Action>ПригласитьВсехНеЗваныхВыполнить</Action>
+	</Command>
 	</Commands>
 </Form>
