@@ -153,6 +153,31 @@ def check_dump_format(report: Report) -> None:
             report.ok("формат %s — %d файл(ов)" % (value, len(files)))
 
 
+def check_text_template_bom(report: Report) -> None:
+    """Текстовые макеты (Templates/**/Ext/*.txt) обязаны начинаться с BOM.
+
+    Без BOM ПолучитьМакет().ПолучитьТекст() в сеансе читает макет как ANSI,
+    и настройки маппинга превращаются в кракозябры с невалидным XML внутри
+    (бой 02.10.2026: BOM потерялся при правке, ФЛК и отправка встали).
+    """
+    report.stage("BOM у текстовых макетов")
+    checked = 0
+    missing = 0
+    for path in iter_files(src_dir()):
+        if not path.endswith(".txt") or os.sep + "Templates" + os.sep not in path:
+            continue
+        checked += 1
+        with open(path, "rb") as handle:
+            head = handle.read(3)
+        if head != b"\xef\xbb\xbf":
+            missing += 1
+            report.fail("%s: нет BOM — макет прочитается как ANSI" % rel(path))
+    if checked and not missing:
+        report.ok("BOM на месте — %d текстовых макетов" % checked)
+    elif not checked:
+        report.ok("текстовых макетов нет — проверка неприменима")
+
+
 def check_xml_parses(report: Report) -> None:
     report.stage("разбор XML")
     total = 0
@@ -282,6 +307,7 @@ def main() -> int:
     report = Report()
     version = check_version(report)
     check_dump_format(report)
+    check_text_template_bom(report)
     check_xml_parses(report)
     check_hygiene(report)
     check_version_bumped(report, version)
