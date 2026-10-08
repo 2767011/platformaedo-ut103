@@ -85,6 +85,20 @@
 									<ContextMenu name="ТекущийСтатусКонтекстноеМеню" id="19"/>
 									<ExtendedTooltip name="ТекущийСтатусРасширеннаяПодсказка" id="20"/>
 								</InputField>
+								<InputField name="СтатусЧЗ" id="249">
+									<DataPath>СтатусЧЗ</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Честный знак</v8:content>
+										</v8:item>
+									</Title>
+									<Width>60</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ContextMenu name="СтатусЧЗКонтекстноеМеню" id="250"/>
+									<ExtendedTooltip name="СтатусЧЗРасширеннаяПодсказка" id="251"/>
+								</InputField>
 								<UsualGroup name="ГруппаЗапросАннулирования" id="144">
 									<Title>
 										<v8:item>
@@ -830,6 +844,21 @@
 				<v8:Type>xs:string</v8:Type>
 				<v8:StringQualifiers>
 					<v8:Length>200</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СтатусЧЗ" id="248">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Честный знак</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
