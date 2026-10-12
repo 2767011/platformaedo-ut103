@@ -86,6 +86,64 @@
 						<Event name="OnChange">ОтборПриИзменении</Event>
 					</Events>
 				</InputField>
+				<RadioButtonField name="ПолеВидДокументов" id="702">
+					<DataPath>ОтборВидДокументов</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документы</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Left</TitleLocation>
+					<RadioButtonType>RadioButtons</RadioButtonType>
+					<ColumnsCount>3</ColumnsCount>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Все</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Все</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>УПД</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">УПД</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>УКД</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">УКД</Value>
+							</xr:Value>
+						</xr:Item>
+				</ChoiceList>
+					<ContextMenu name="ПолеВидДокументовКонтекстноеМеню" id="703"/>
+					<ExtendedTooltip name="ПолеВидДокументовРасширеннаяПодсказка" id="704"/>
+					<Events>
+						<Event name="OnChange">ОтборПриИзменении</Event>
+					</Events>
+				</RadioButtonField>
 				<LabelDecoration name="НадписьПосчитано" id="20">
 					<Title formatted="false">
 						<v8:item>
@@ -827,6 +885,252 @@
 						</Table>
 					</ChildItems>
 				</Page>
+				<Page name="СтраницаВходящие" id="801">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Входящие</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="СтраницаВходящиеРасширеннаяПодсказка" id="802"/>
+					<ChildItems>
+						<LabelDecoration name="НадписьВходящие" id="803">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Входящие УПД из Платформы ЭДО за период. Список получают кнопкой «Получить список» (обращение к оператору); поступление создается по выделенным строкам без проведения - проверьте и проведите его сами</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьВходящиеКонтекстноеМеню" id="804"/>
+							<ExtendedTooltip name="НадписьВходящиеРасширеннаяПодсказка" id="805"/>
+						</LabelDecoration>
+						<Table name="ТаблицаВходящиеСводка" id="806">
+							<CommandBarLocation>None</CommandBarLocation>
+							<Height>4</Height>
+							<RowSelectionMode>Cell</RowSelectionMode>
+							<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
+							<DataPath>ВходящиеСводка</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТаблицаВходящиеСводкаКонтекстноеМеню" id="807"/>
+							<AutoCommandBar name="ТаблицаВходящиеСводкаКоманднаяПанель" id="808"/>
+							<ExtendedTooltip name="ТаблицаВходящиеСводкаРасширеннаяПодсказка" id="809"/>
+							<SearchStringAddition name="ТаблицаВходящиеСводкаСтрокаПоиска" id="810">
+								<AdditionSource>
+									<Item>ТаблицаВходящиеСводка</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаВходящиеСводкаСтрокаПоискаКонтекстноеМеню" id="811"/>
+								<ExtendedTooltip name="ТаблицаВходящиеСводкаСтрокаПоискаРасширеннаяПодсказка" id="812"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТаблицаВходящиеСводкаСостояниеПросмотра" id="813">
+								<AdditionSource>
+									<Item>ТаблицаВходящиеСводка</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаВходящиеСводкаСостояниеПросмотраКонтекстноеМеню" id="814"/>
+								<ExtendedTooltip name="ТаблицаВходящиеСводкаСостояниеПросмотраРасширеннаяПодсказка" id="815"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТаблицаВходящиеСводкаУправлениеПоиском" id="816">
+								<AdditionSource>
+									<Item>ТаблицаВходящиеСводка</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаВходящиеСводкаУправлениеПоискомКонтекстноеМеню" id="817"/>
+								<ExtendedTooltip name="ТаблицаВходящиеСводкаУправлениеПоискомРасширеннаяПодсказка" id="818"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ТаблицаВходящиеСводкаВыбор</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ВхСвСостояние" id="819">
+									<DataPath>ВходящиеСводка.Состояние</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Состояние</v8:content>
+										</v8:item>
+									</Title>
+									<Width>40</Width>
+									<ContextMenu name="ВхСвСостояниеКонтекстноеМеню" id="820"/>
+									<ExtendedTooltip name="ВхСвСостояниеРасширеннаяПодсказка" id="821"/>
+								</InputField>
+								<InputField name="ВхСвКоличество" id="822">
+									<DataPath>ВходящиеСводка.Количество</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Документов</v8:content>
+										</v8:item>
+									</Title>
+									<Width>14</Width>
+									<ContextMenu name="ВхСвКоличествоКонтекстноеМеню" id="823"/>
+									<ExtendedTooltip name="ВхСвКоличествоРасширеннаяПодсказка" id="824"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<Table name="ТаблицаВходящие" id="825">
+							<CommandBarLocation>Top</CommandBarLocation>
+							<Height>18</Height>
+							<RowSelectionMode>Row</RowSelectionMode>
+							<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
+							<DataPath>Входящие</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТаблицаВходящиеКонтекстноеМеню" id="826"/>
+							<AutoCommandBar name="ТаблицаВходящиеКоманднаяПанель" id="827">
+								<ChildItems>
+									<Button name="КнопкаВхПолучить" id="828">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПолучитьВходящие</CommandName>
+										<ExtendedTooltip name="КнопкаВхПолучитьРасширеннаяПодсказка" id="829"/>
+									</Button>
+									<Button name="КнопкаВхСоздатьПоступления" id="830">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СоздатьПоступленияПоВходящим</CommandName>
+										<ExtendedTooltip name="КнопкаВхСоздатьПоступленияРасширеннаяПодсказка" id="831"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ТаблицаВходящиеРасширеннаяПодсказка" id="832"/>
+							<SearchStringAddition name="ТаблицаВходящиеСтрокаПоиска" id="833">
+								<AdditionSource>
+									<Item>ТаблицаВходящие</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаВходящиеСтрокаПоискаКонтекстноеМеню" id="834"/>
+								<ExtendedTooltip name="ТаблицаВходящиеСтрокаПоискаРасширеннаяПодсказка" id="835"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТаблицаВходящиеСостояниеПросмотра" id="836">
+								<AdditionSource>
+									<Item>ТаблицаВходящие</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаВходящиеСостояниеПросмотраКонтекстноеМеню" id="837"/>
+								<ExtendedTooltip name="ТаблицаВходящиеСостояниеПросмотраРасширеннаяПодсказка" id="838"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТаблицаВходящиеУправлениеПоиском" id="839">
+								<AdditionSource>
+									<Item>ТаблицаВходящие</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаВходящиеУправлениеПоискомКонтекстноеМеню" id="840"/>
+								<ExtendedTooltip name="ТаблицаВходящиеУправлениеПоискомРасширеннаяПодсказка" id="841"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ТаблицаВходящиеВыбор</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ВхДата" id="842">
+									<DataPath>Входящие.Дата</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата</v8:content>
+										</v8:item>
+									</Title>
+									<Width>10</Width>
+									<ContextMenu name="ВхДатаКонтекстноеМеню" id="843"/>
+									<ExtendedTooltip name="ВхДатаРасширеннаяПодсказка" id="844"/>
+								</InputField>
+								<InputField name="ВхНомер" id="845">
+									<DataPath>Входящие.Номер</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Номер</v8:content>
+										</v8:item>
+									</Title>
+									<Width>14</Width>
+									<ContextMenu name="ВхНомерКонтекстноеМеню" id="846"/>
+									<ExtendedTooltip name="ВхНомерРасширеннаяПодсказка" id="847"/>
+								</InputField>
+								<InputField name="ВхПродавец" id="848">
+									<DataPath>Входящие.Продавец</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Продавец</v8:content>
+										</v8:item>
+									</Title>
+									<Width>30</Width>
+									<ContextMenu name="ВхПродавецКонтекстноеМеню" id="849"/>
+									<ExtendedTooltip name="ВхПродавецРасширеннаяПодсказка" id="850"/>
+								</InputField>
+								<InputField name="ВхИНН" id="851">
+									<DataPath>Входящие.ИННПродавца</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ИНН</v8:content>
+										</v8:item>
+									</Title>
+									<Width>12</Width>
+									<ContextMenu name="ВхИННКонтекстноеМеню" id="852"/>
+									<ExtendedTooltip name="ВхИННРасширеннаяПодсказка" id="853"/>
+								</InputField>
+								<InputField name="ВхОрганизация" id="854">
+									<DataPath>Входящие.Организация</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Организация</v8:content>
+										</v8:item>
+									</Title>
+									<Width>20</Width>
+									<ContextMenu name="ВхОрганизацияКонтекстноеМеню" id="855"/>
+									<ExtendedTooltip name="ВхОрганизацияРасширеннаяПодсказка" id="856"/>
+								</InputField>
+								<InputField name="ВхСтатус" id="857">
+									<DataPath>Входящие.Статус</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>У оператора</v8:content>
+										</v8:item>
+									</Title>
+									<Width>12</Width>
+									<ContextMenu name="ВхСтатусКонтекстноеМеню" id="858"/>
+									<ExtendedTooltip name="ВхСтатусРасширеннаяПодсказка" id="859"/>
+								</InputField>
+								<InputField name="ВхДокумент" id="860">
+									<DataPath>Входящие.Документ</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Документ базы</v8:content>
+										</v8:item>
+									</Title>
+									<Width>30</Width>
+									<ContextMenu name="ВхДокументКонтекстноеМеню" id="861"/>
+									<ExtendedTooltip name="ВхДокументРасширеннаяПодсказка" id="862"/>
+								</InputField>
+								<InputField name="ВхЗамечания" id="863">
+									<DataPath>Входящие.Замечания</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Замечания</v8:content>
+										</v8:item>
+									</Title>
+									<Width>50</Width>
+									<ContextMenu name="ВхЗамечанияКонтекстноеМеню" id="864"/>
+									<ExtendedTooltip name="ВхЗамечанияРасширеннаяПодсказка" id="865"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
 				<Page name="СтраницаРазбор" id="150">
 					<Title>
 						<v8:item>
@@ -906,6 +1210,19 @@
 								<Event name="Selection">ТаблицаДокументовВыбор</Event>
 							</Events>
 							<ChildItems>
+								<InputField name="ДокВид" id="705">
+									<DataPath>Документы.Вид</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вид</v8:content>
+										</v8:item>
+									</Title>
+									<ReadOnly>true</ReadOnly>
+									<Width>6</Width>
+									<ContextMenu name="ДокВидКонтекстноеМеню" id="706"/>
+									<ExtendedTooltip name="ДокВидРасширеннаяПодсказка" id="707"/>
+								</InputField>
 								<InputField name="ДокДата" id="168">
 									<DataPath>Документы.Дата</DataPath>
 									<Title>
@@ -1286,6 +1603,21 @@
 				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="ОтборВидДокументов" id="700">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид документов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>10</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 		<Attribute name="ТекстПосчитано" id="221">
 			<Title>
 				<v8:item>
@@ -1542,6 +1874,15 @@
 				<Column name="Документ" id="245">
 					<Type>
 						<v8:TypeSet>cfg:DocumentRef</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="Вид" id="701">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
 					</Type>
 				</Column>
 				<Column name="Дата" id="246">
@@ -1985,6 +2326,226 @@
 			</Column>
 			</Columns>
 		</Attribute>
+		<Attribute name="ВходящиеСводка" id="866">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Входящие сводка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Состояние" id="867">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Количество" id="868">
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Входящие" id="869">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Входящие</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Ид" id="870">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Дата" id="871">
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Номер" id="872">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Продавец" id="873">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>250</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИННПродавца" id="874">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>12</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Организация" id="875">
+					<Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Статус" id="876">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Документ" id="877">
+					<Type>
+						<v8:TypeSet>cfg:DocumentRef</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="Загрузка" id="878">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Замечания" id="879">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ВходящиеВсе" id="880">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Входящие все</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Ид" id="881">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Дата" id="882">
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Номер" id="883">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Продавец" id="884">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>250</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИННПродавца" id="885">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>12</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Организация" id="886">
+					<Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Статус" id="887">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Документ" id="888">
+					<Type>
+						<v8:TypeSet>cfg:DocumentRef</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="Загрузка" id="889">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Замечания" id="890">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="Обновить" id="261">
@@ -2104,5 +2665,35 @@
 		</Title>
 		<Action>ПригласитьВсехНеЗваныхВыполнить</Action>
 	</Command>
+		<Command name="ПолучитьВходящие" id="891">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить список</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запросить у оператора входящие УПД за период и отметить, по каким уже создан документ базы.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьВходящиеВыполнить</Action>
+		</Command>
+		<Command name="СоздатьПоступленияПоВходящим" id="892">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать поступление</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать поступление по выделенным входящим без проведения. Уже созданные не дублируются.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьПоступленияПоВходящимВыполнить</Action>
+		</Command>
 	</Commands>
 </Form>
