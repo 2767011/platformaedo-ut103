@@ -32,6 +32,11 @@
 				<CommandName>Form.Command.СнятьПаузу</CommandName>
 				<ExtendedTooltip name="КнопкаСнятьПаузуРасширеннаяПодсказка" id="8"/>
 			</Button>
+			<Button name="КнопкаОбменСейчас" id="900">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОбменСейчас</CommandName>
+				<ExtendedTooltip name="КнопкаОбменСейчасРасширеннаяПодсказка" id="901"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -156,6 +161,16 @@
 				</LabelDecoration>
 			</ChildItems>
 		</UsualGroup>
+		<LabelDecoration name="НадписьОбмен" id="902">
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обмен: нет данных</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="НадписьОбменКонтекстноеМеню" id="903"/>
+			<ExtendedTooltip name="НадписьОбменРасширеннаяПодсказка" id="904"/>
+		</LabelDecoration>
 		<Pages name="СтраницыЦентра" id="23">
 			<PagesRepresentation>TabsOnTop</PagesRepresentation>
 			<ExtendedTooltip name="СтраницыЦентраРасширеннаяПодсказка" id="24"/>
@@ -2583,6 +2598,21 @@
 				</v8:item>
 			</Title>
 			<Action>СнятьПаузуВыполнить</Action>
+		</Command>
+		<Command name="ОбменСейчас" id="905">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обмен сейчас</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить отправку очереди и сверку статусов у оператора, не дожидаясь расписания</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбменСейчасВыполнить</Action>
 		</Command>
 		<Command name="ОтправитьВыделенные" id="267">
 			<Title>
