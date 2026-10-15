@@ -686,7 +686,7 @@
 										<ExtendedTooltip name="АдресаУправлениеПоискомРасширеннаяПодсказка" id="86"/>
 									</SearchControlAddition>
 									<ChildItems>
-										<InputField name="КолонкаТекущий" id="87">
+										<CheckBoxField name="КолонкаТекущий" id="87">
 											<DataPath>Адреса.Текущий</DataPath>
 											<ReadOnly>true</ReadOnly>
 											<Title>
@@ -695,10 +695,15 @@
 													<v8:content>Тек.</v8:content>
 												</v8:item>
 											</Title>
-											<Width>5</Width>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Адрес, привязанный к контрагенту в базе: на него уходят документы</v8:content>
+												</v8:item>
+											</ToolTip>
 											<ContextMenu name="КолонкаТекущийКонтекстноеМеню" id="88"/>
 											<ExtendedTooltip name="КолонкаТекущийРасширеннаяПодсказка" id="89"/>
-										</InputField>
+										</CheckBoxField>
 										<InputField name="КолонкаАдрес" id="90">
 											<DataPath>Адреса.Адрес</DataPath>
 											<ReadOnly>true</ReadOnly>
@@ -996,11 +1001,7 @@
 			<Columns>
 				<Column name="Текущий" id="120">
 					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>3</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
+						<v8:Type>xs:boolean</v8:Type>
 					</Type>
 				</Column>
 				<Column name="Адрес" id="121">
