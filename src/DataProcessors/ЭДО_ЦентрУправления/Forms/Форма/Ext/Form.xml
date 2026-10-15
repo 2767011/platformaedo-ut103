@@ -17,6 +17,11 @@
 				<DefaultButton>true</DefaultButton>
 				<ExtendedTooltip name="КнопкаОбновитьРасширеннаяПодсказка" id="2"/>
 			</Button>
+			<Button name="КнопкаОбменСейчас" id="900">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОбменСейчас</CommandName>
+				<ExtendedTooltip name="КнопкаОбменСейчасРасширеннаяПодсказка" id="901"/>
+			</Button>
 			<Button name="КнопкаПроверитьAPI" id="3">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.Command.ПроверитьAPI</CommandName>
@@ -32,17 +37,24 @@
 				<CommandName>Form.Command.СнятьПаузу</CommandName>
 				<ExtendedTooltip name="КнопкаСнятьПаузуРасширеннаяПодсказка" id="8"/>
 			</Button>
-			<Button name="КнопкаОбменСейчас" id="900">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.ОбменСейчас</CommandName>
-				<ExtendedTooltip name="КнопкаОбменСейчасРасширеннаяПодсказка" id="901"/>
-			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
+		<LabelDecoration name="НадписьОбмен" id="902">
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обмен: нет данных</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Font ref="style:NormalTextFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<ContextMenu name="НадписьОбменКонтекстноеМеню" id="903"/>
+			<ExtendedTooltip name="НадписьОбменРасширеннаяПодсказка" id="904"/>
+		</LabelDecoration>
 		<UsualGroup name="ГруппаОтбор" id="9">
 			<Group>AlwaysHorizontal</Group>
 			<ExtendedTooltip name="ГруппаОтборРасширеннаяПодсказка" id="10"/>
@@ -156,21 +168,12 @@
 							<v8:content>не рассчитано</v8:content>
 						</v8:item>
 					</Title>
+					<TextColor>web:Gray</TextColor>
 					<ContextMenu name="НадписьПосчитаноКонтекстноеМеню" id="21"/>
 					<ExtendedTooltip name="НадписьПосчитаноРасширеннаяПодсказка" id="22"/>
 				</LabelDecoration>
 			</ChildItems>
 		</UsualGroup>
-		<LabelDecoration name="НадписьОбмен" id="902">
-			<Title formatted="false">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Обмен: нет данных</v8:content>
-				</v8:item>
-			</Title>
-			<ContextMenu name="НадписьОбменКонтекстноеМеню" id="903"/>
-			<ExtendedTooltip name="НадписьОбменРасширеннаяПодсказка" id="904"/>
-		</LabelDecoration>
 		<Pages name="СтраницыЦентра" id="23">
 			<PagesRepresentation>TabsOnTop</PagesRepresentation>
 			<ExtendedTooltip name="СтраницыЦентраРасширеннаяПодсказка" id="24"/>
@@ -204,6 +207,8 @@
 											<DataPath>ИтогиГрупп</DataPath>
 											<CommandBarLocation>None</CommandBarLocation>
 											<Height>7</Height>
+											<Width>52</Width>
+											<HorizontalStretch>false</HorizontalStretch>
 											<ContextMenu name="ТаблицаИтоговКонтекстноеМеню" id="32"/>
 											<AutoCommandBar name="ТаблицаИтоговКоманднаяПанель" id="33"/>
 											<ExtendedTooltip name="ТаблицаИтоговРасширеннаяПодсказка" id="34"/>
@@ -258,6 +263,12 @@
 													</Title>
 													<ReadOnly>true</ReadOnly>
 													<Width>8</Width>
+													<Format>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ЧН=0</v8:content>
+														</v8:item>
+													</Format>
 													<ContextMenu name="ИтогКоличествоКонтекстноеМеню" id="48"/>
 													<ExtendedTooltip name="ИтогКоличествоРасширеннаяПодсказка" id="49"/>
 												</InputField>
@@ -271,6 +282,12 @@
 													</Title>
 													<ReadOnly>true</ReadOnly>
 													<Width>16</Width>
+													<Format>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ЧДЦ=2; ЧН=-</v8:content>
+														</v8:item>
+													</Format>
 													<ContextMenu name="ИтогСуммаКонтекстноеМеню" id="51"/>
 													<ExtendedTooltip name="ИтогСуммаРасширеннаяПодсказка" id="52"/>
 												</InputField>
@@ -333,7 +350,7 @@
 														</v8:item>
 													</Title>
 													<ReadOnly>true</ReadOnly>
-													<Width>22</Width>
+													<Width>36</Width>
 													<ContextMenu name="КонтурПоказательКонтекстноеМеню" id="69"/>
 													<ExtendedTooltip name="КонтурПоказательРасширеннаяПодсказка" id="70"/>
 												</InputField>
@@ -360,7 +377,7 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>По состояниям (щелчок открывает список)</v8:content>
+									<v8:content>По состояниям</v8:content>
 								</v8:item>
 							</Title>
 							<Group>Vertical</Group>
@@ -646,9 +663,16 @@
 							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Считаются контрагенты с отгрузками за период. Адрес и оператор берутся из собственного адреса контрагента или из кэша кандидатов; состояние связи - из кэша, обновляемого опросом оператора (кнопка Обновить состояние)</v8:content>
+									<v8:content>Контрагенты с отгрузками за период: кого пригласить в ЭДО</v8:content>
 								</v8:item>
 							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Считаются контрагенты с отгрузками за период. Адрес и оператор берутся из собственного адреса контрагента или из кэша кандидатов; состояние связи - из кэша, обновляемого опросом оператора (кнопка Обновить состояние)</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
 							<ContextMenu name="НадписьПриглашенияКонтекстноеМеню" id="603"/>
 							<ExtendedTooltip name="НадписьПриглашенияРасширеннаяПодсказка" id="604"/>
 						</LabelDecoration>
@@ -915,9 +939,16 @@
 							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Входящие УПД из Платформы ЭДО за период. Список получают кнопкой «Получить список» (обращение к оператору); поступление создается по выделенным строкам без проведения - проверьте и проведите его сами</v8:content>
+									<v8:content>Входящие УПД из Платформы ЭДО за период</v8:content>
 								</v8:item>
 							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Входящие УПД из Платформы ЭДО за период. Список получают кнопкой «Получить список» (обращение к оператору); поступление создается по выделенным строкам без проведения - проверьте и проведите его сами</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
 							<ContextMenu name="НадписьВходящиеКонтекстноеМеню" id="804"/>
 							<ExtendedTooltip name="НадписьВходящиеРасширеннаяПодсказка" id="805"/>
 						</LabelDecoration>
@@ -2576,9 +2607,15 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Проверить связь с оператором</v8:content>
+					<v8:content>Проверить связь</v8:content>
 				</v8:item>
 			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить связь с оператором ЭДО по каждой организации базы (или по выбранной в отборе)</v8:content>
+				</v8:item>
+			</ToolTip>
 			<Action>ПроверитьAPIВыполнить</Action>
 		</Command>
 		<Command name="ОткрытьЭлемент" id="263">
