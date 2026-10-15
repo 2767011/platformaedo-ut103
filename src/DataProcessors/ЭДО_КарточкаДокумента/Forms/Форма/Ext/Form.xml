@@ -68,8 +68,12 @@
 									</Title>
 									<Width>44</Width>
 									<AutoMaxWidth>false</AutoMaxWidth>
+									<OpenButton>true</OpenButton>
 									<ContextMenu name="НакладнаяКонтекстноеМеню" id="10"/>
 									<ExtendedTooltip name="НакладнаяРасширеннаяПодсказка" id="11"/>
+									<Events>
+										<Event name="Opening">НакладнаяОткрытие</Event>
+									</Events>
 								</InputField>
 								<InputField name="ТекущийСтатус" id="18">
 									<DataPath>ТекущийСтатус</DataPath>
@@ -369,8 +373,12 @@
 									</Title>
 									<Width>60</Width>
 									<AutoMaxWidth>false</AutoMaxWidth>
+									<OpenButton>true</OpenButton>
 									<ContextMenu name="КонтрагентПредставлениеКонтекстноеМеню" id="13"/>
 									<ExtendedTooltip name="КонтрагентПредставлениеРасширеннаяПодсказка" id="14"/>
+									<Events>
+										<Event name="Opening">КонтрагентПредставлениеОткрытие</Event>
+									</Events>
 								</InputField>
 								<UsualGroup name="ГруппаПауза" id="153">
 									<Title>
@@ -515,6 +523,11 @@
 												<Type>CommandBarButton</Type>
 												<CommandName>Form.Command.ОбновитьДокументыКонтрагента</CommandName>
 												<ExtendedTooltip name="КнОбновитьДокументыКонтрагентаРасширеннаяПодсказка" id="222"/>
+											</Button>
+											<Button name="КнОткрытьДокументКонтрагента" id="253">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ОткрытьДокументКонтрагента</CommandName>
+												<ExtendedTooltip name="КнОткрытьДокументКонтрагентаРасширеннаяПодсказка" id="254"/>
 											</Button>
 										</ChildItems>
 									</AutoCommandBar>
@@ -1331,6 +1344,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОбновитьДокументыКонтрагента</Action>
+		</Command>
+		<Command name="ОткрытьДокументКонтрагента" id="252">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть документ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть форму выбранного документа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьДокументКонтрагента</Action>
 		</Command>
 	</Commands>
 	<Parameters>
