@@ -1139,13 +1139,26 @@
 									<ContextMenu name="ВхОрганизацияКонтекстноеМеню" id="855"/>
 									<ExtendedTooltip name="ВхОрганизацияРасширеннаяПодсказка" id="856"/>
 								</InputField>
+								<InputField name="ВхСостояниеЭДО" id="924">
+									<DataPath>Входящие.СостояниеЭДО</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Состояние</v8:content>
+										</v8:item>
+									</Title>
+									<Width>22</Width>
+									<ContextMenu name="ВхСостояниеЭДОКонтекстноеМеню" id="925"/>
+									<ExtendedTooltip name="ВхСостояниеЭДОРасширеннаяПодсказка" id="926"/>
+								</InputField>
 								<InputField name="ВхСтатус" id="857">
 									<DataPath>Входящие.Статус</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>У оператора</v8:content>
+											<v8:content>Код API</v8:content>
 										</v8:item>
 									</Title>
 									<Width>12</Width>
@@ -2563,6 +2576,15 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
+				<Column name="СостояниеЭДО" id="923">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
 			</Columns>
 		</Attribute>
 		<Attribute name="ВходящиеВсе" id="880">
@@ -2653,6 +2675,15 @@
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
 							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СостояниеЭДО" id="922">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
 							<v8:AllowedLength>Variable</v8:AllowedLength>
 						</v8:StringQualifiers>
 					</Type>
