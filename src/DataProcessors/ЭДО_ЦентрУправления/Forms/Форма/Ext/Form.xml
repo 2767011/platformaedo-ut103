@@ -1753,6 +1753,15 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="ВходящиеПрочитаныПо" id="945">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 		<Attribute name="ТекстРазбора" id="222">
 			<Title>
 				<v8:item>
@@ -2603,7 +2612,7 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-							<Column name="Вид" id="930">
+				<Column name="Вид" id="930">
 					<Type>
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
@@ -2747,7 +2756,7 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-							<Column name="Вид" id="936">
+				<Column name="Вид" id="936">
 					<Type>
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
