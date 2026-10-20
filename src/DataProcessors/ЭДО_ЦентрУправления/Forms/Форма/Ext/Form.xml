@@ -1043,6 +1043,11 @@
 										<CommandName>Form.Command.СоздатьПоступленияПоВходящим</CommandName>
 										<ExtendedTooltip name="КнопкаВхСоздатьПоступленияРасширеннаяПодсказка" id="831"/>
 									</Button>
+									<Button name="КнопкаВхПривязатьКПоступлению" id="927">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПривязатьКПоступлению</CommandName>
+										<ExtendedTooltip name="КнопкаВхПривязатьКПоступлениюРасширеннаяПодсказка" id="928"/>
+									</Button>
 								</ChildItems>
 							</AutoCommandBar>
 							<ExtendedTooltip name="ТаблицаВходящиеРасширеннаяПодсказка" id="832"/>
@@ -2874,6 +2879,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СоздатьПоступленияПоВходящимВыполнить</Action>
+		</Command>
+		<Command name="ПривязатьКПоступлению" id="929">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Привязать к поступлению</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Связать входящий с поступлением, которое уже заведено в базе (например, по ТТН ЕГАИС), вместо создания второго.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПривязатьКПоступлениюВыполнить</Action>
 		</Command>
 	</Commands>
 </Form>
