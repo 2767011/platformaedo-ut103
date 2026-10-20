@@ -50,6 +50,7 @@
 					<v8:content>Обмен: нет данных</v8:content>
 				</v8:item>
 			</Title>
+			<AutoMaxWidth>false</AutoMaxWidth>
 			<HorizontalStretch>true</HorizontalStretch>
 			<Font ref="style:NormalTextFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 			<ContextMenu name="НадписьОбменКонтекстноеМеню" id="903"/>
