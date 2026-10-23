@@ -163,6 +163,17 @@
 									<AutoCommandBar name="ИсторияКоманднаяПанель" id="36">
 										<Autofill>false</Autofill>
 										<ChildItems>
+											<Button name="КнЗапроситьИсторию" id="300">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ЗапроситьИсторию</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Запросить историю</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="КнЗапроситьИсториюРасширеннаяПодсказка" id="301"/>
+											</Button>
 											<Button name="КнОткрытьXML" id="129">
 												<Type>CommandBarButton</Type>
 												<CommandName>Form.Command.ОткрытьXMLОтправки</CommandName>
@@ -1391,6 +1402,21 @@
 				</v8:item>
 			</Title>
 			<Action>ПривязатьАдрес</Action>
+		</Command>
+		<Command name="ЗапроситьИсторию" id="302">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запросить историю</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найти у оператора все отправки по номеру и дате накладной: по адресам контрагента и сплошным обходом периода. При открытии показывается только текущий экземпляр.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗапроситьИсторию</Action>
 		</Command>
 		<Command name="ОткрытьXMLОтправки" id="135">
 			<Title>
